@@ -758,8 +758,13 @@
       </Controls>
       <PanelDropdown>
         <Button Id="FusionCreateNewComponentCommand" />
+        <DropDownButton _LCLZId="lclzPCBCreate" _LCLZText="Create PCB" >
+        <Button Id="FusionFastenersCommand" />
+        <Button Id="PCBDeriveCmd" />
+        <Button Id="PCBCreateCmd" />
+        </DropDownButton>
+        <Separator />
         <Button Id="JointAssembleCmdNew" />
-		<Button Id="FusionFastenersCommand" />
         <Button Id="JointAsBuiltCmd" />
         <Button Id="JointOrigin" />
         <Button Id="RigidGroupCmd" />
