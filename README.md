@@ -2,6 +2,8 @@
 
 Adding an assembly tab to Fusion 360 design documents
 
+![Assembly  tab preview](./assets/asm-tab.png)
+
 **!!! Backup you original TabToolbar.xml before using this new toolbar definition xml !!!**
 
 On Mac OS, over-write the existing file here:
