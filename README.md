@@ -12,7 +12,7 @@ On **Mac OS**, over-write the existing file here:
 
 On **Windows**, over-write the existing file here:
 
-    \Users\ <Your User Name> \AppData\Local\Autodesk\webdeploy\production\ <Current deployment GUID> /Autodesk Fusion 360.app/Contents/Libraries/Applications/Fusion/Fusion/UI/FusionUI/Resources/Toolbar/TabToolbars.xml
+    \Users\ <Your User Name> \AppData\Local\Autodesk\webdeploy\production\ <Current deployment GUID> \Fusion\UI\FusionUI\Resources\Toolbar\Toolbar\TabToolbars.xml
 
 Relaunch Fusion 360.
 
