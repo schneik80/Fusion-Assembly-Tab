@@ -668,6 +668,7 @@
         <Button Id="ChangeParameterCommand" />
         <Button Id="FusionComputeAllCommand" />
 		<Button Id="FusionComputeUnresolvedCommand" />
+    <Button Id="FusionShowDesignConfigPanelCmd" />
         <Separator />
         <Button Id="TSpline2BRepCommand" />
       </PanelDropdown>
