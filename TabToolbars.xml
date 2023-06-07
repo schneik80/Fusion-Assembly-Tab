@@ -24,17 +24,17 @@
         <Tab Id="ASMTab"
          _LCLZId="lclzASMTab"
          _LCLZText="Assembly"
-         Panels="AssemblePanel;ASMModifyPanel;AssignPanel;ReleasePanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+         Panels="AssemblePanel;ASMModifyPanel;ConfigurePanel;AssignPanel;ReleasePanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
          Environment="FusionSolidEnvironment"/>
     <Tab Id="SolidTab"
          _LCLZId="lclzSolidTab"
          _LCLZText="SOLID"
-         Panels="SolidCreatePanel;AutomatePanel;SolidModifyPanel;AssemblePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+         Panels="SolidCreatePanel;AutomatePanel;SolidModifyPanel;AssemblePanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
          Environment="FusionSolidEnvironment"/>
     <Tab Id="SurfaceTab"
          _LCLZId="lclzSurfaceTab"
          _LCLZText="SURFACE"
-         Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;AssemblePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel"
+         Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;AssemblePanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel"
          Environment="FusionSolidEnvironment"
          TabEnvironment="FusionSurfaceEnvironment"/>
     <!-- ************** -->
@@ -52,13 +52,13 @@
     <Tab Id="SheetMetalTab"
          _LCLZId="lclzSheetMetalTab"
          _LCLZText="SHEET METAL"
-         Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;AssemblePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel"
+         Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;AssemblePanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel"
          Environment="FusionSolidEnvironment"
          TabEnvironment="FusionSheetMetalEnvironment"/>
     <Tab Id="PlasticTab"
          _LCLZId="lclzPlasticPartsTab"
          _LCLZText="PLASTIC"
-         Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;PlasticPartsAssemblePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+         Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;PlasticPartsAssemblePanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
          Environment="FusionSolidEnvironment"/>
     <Tab Id="ToolsTab"
          _LCLZId="lclzToolsTab"
@@ -68,7 +68,7 @@
     <Tab Id="ManageTab"
          _LCLZId="lclzManageTab"
          _LCLZText="MANAGE"
-         Panels="AssignPanel;ReleasePanel;BomPanel"
+         Panels="AssignPanel;ReleasePanel;BomPanel;ManagePanel"
          Environment="FusionSolidEnvironment"/>
 
 
@@ -115,7 +115,7 @@
     <Tab Id="SketchTab"
           _LCLZId="lclzSketchTab"
           _LCLZText="SKETCH"
-          Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel"
+          Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel"
           Environment="FusionSolidEnvironment"
           ContextualFinishId="SketchStop" />
     <Tab Id="EditSnapshotTab"
@@ -322,21 +322,24 @@
         <Button Id="FilletSketchCmd" />
         <Button Id="TrimSketchCmd" />
         <Button Id="Offset" />
+        <Button Id="BlendG1CurveSketchCmd" />
       </Controls>
       <PanelDropdown  >
-        <Button Id="FilletSketchCmd" />
+      <Button Id="FilletSketchCmd" />
         <DropDownButton _LCLZId="lclzSketchChamfer" _LCLZText="Chamfer" >
           <Button Id="ChamferSketchEqualDistance" />
           <Button Id="ChamferSketchDistanceAngle" />
           <Button Id="ChamferSketchDistanceDistance" />
         </DropDownButton>
+      <Button Id="BlendG1CurveSketchCmd" />
+		  <Button Id="Offset" />
+		  <Separator />
         <Button Id="TrimSketchCmd" />
         <Button Id="ExtendSketchCmd" />
         <Button Id="BreakSketchCmd" />
         <Button Id="SketchScaleCmd" />
-        <Button Id="Offset" />
-        <Separator />
         <Button Id="FusionMoveCommand" />
+        <Separator />
         <Button Id="ChangeParameterCommand" />
       </PanelDropdown>
     </Panel>
