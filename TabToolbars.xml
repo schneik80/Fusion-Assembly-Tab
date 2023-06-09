@@ -589,6 +589,19 @@
        </Controls>
     </Panel>
 
+    <!-- ************************************ -->
+    <!-- ** Configure Panel (Design::Solid) ** -->
+    <!-- ************************************ -->
+    <Panel Id="ConfigurePanel" _LCLZId="lclzConfigure" _LCLZText="Configure" >
+     <Controls>
+        <Button Id="FusionStartDesignConfigModeCmd" />
+        <Button Id="FusionShowDesignConfigPanelCmd" />
+     </Controls>
+     <PanelDropdown>
+       <Button Id="FusionStartDesignConfigModeCmd" />
+       <Button Id="FusionShowDesignConfigPanelCmd" />
+     </PanelDropdown>
+   </Panel>
 
     <!-- ********************************** -->
     <!-- ** Modify Panel (Design::ASM) ** -->
@@ -729,6 +742,7 @@
         <Separator />
         <Button Id="FusionSheetmetalUnfoldCommand" />
         <Button Id="FusionSheetMetalRulesCommand" />
+        <Button Id="FusionSheetMetalRipCommand" />
         <Separator />
         <Button Id="FusionFilletEdgesCommand" />
         <Button Id="FusionChamferCommand" />
@@ -871,7 +885,6 @@
           <Button Id="PatternOnPath" />
           <Button Id="FusionPatternGeometricCommand" />
         </DropDownButton>
-        <Button Id="PatternCommand" />
         <Button Id="MirrorCommand" />
         <Separator />
         <Button Id="FusionSurfaceThickenCommand" />
@@ -1240,6 +1253,7 @@
     <!-- ************************************** -->
     <Panel Id="InsertPanel" _LCLZId="lclzInsert" _LCLZText="Insert" >
       <Controls>
+        <Button Id="FusionFastenersCommand"/>
         <Button Id="FusionAddCanvasCommand" />
       </Controls>
       <PanelDropdown>
@@ -1250,6 +1264,7 @@
         <Button Id="FusionAddBackgroundCanvasCommand" />
         <Separator />
         <Button Id="TSplineImportCommand" />
+        <Button Id="FusionFastenersCommand"/>
         <Button Id="SketchImportSVG" />
         <Button Id="ImportDxfFileCommand" />
         <Button Id="InsertMcMasterCarrComponentCommand" />
@@ -1591,12 +1606,40 @@
       </PanelDropdown>
     </Panel>
 
+	<!-- ************************ -->
+	<!-- **    Materialized Bom Panel   ** -->
+	<!-- ************************ -->
+	<Panel Id="BomPanel" _LCLZId="lclzBom" _LCLZText="BOM"  >
+	    <Controls>
+	        <Button Id="MaterializedBomCmd" />
+        </Controls>
+		<PanelDropdown>
+		    <Button Id="MaterializedBomCmd" />
+		</PanelDropdown>
+	</Panel>
+
+	  <!-- ************************ -->
+	  <!-- **    Manage Panel   ** -->
+	  <!-- ************************ -->
+	  <Panel Id="ManagePanel" _LCLZId="lclzManage" _LCLZText="Fusion 360 Manage (web)"  >
+		  <Controls>
+			  <Button Id="PIMGoToDashboardCmd" />
+			  <Button Id="PIMGoToItemDetailsCmd" />
+			  <Button Id="PIMGoToChangeOrderCmd" />
+		  </Controls>
+		  <PanelDropdown>
+			  <Button Id="PIMGoToDashboardCmd" />
+			  <Button Id="PIMGoToItemDetailsCmd" />
+			  <Button Id="PIMGoToChangeOrderCmd" />
+		  </PanelDropdown>
+	  </Panel>
+
   </CommandToolbar>
   <Toolbar Id="QAT" >
-	<Button Id="PLM360DeepRefreshDocumentCommand" />
+    <Button Id="PLM360DeepRefreshDocumentCommand" />
     <Button Id="GetLatestElectronCmd" />
     <Button Id="GetLatestPcbCmd" />
-    <Button Id="GetLatestSchCmd" />
+    <Button Id="GetLatestSchCmd"/>
   </Toolbar>
 
   <!-- *******************-->
@@ -1612,6 +1655,14 @@
     </DropDownButton>   
     <Label  Id="EIPObjectName" TextFormat="1" ReadOnly="true"/>
     <Button Id="EndEditInPlaceCmd"/>
+  </Toolbar>
+  
+    <!-- *******************-->
+  <!-- Config Toolbar        -->
+  <!-- *******************-->
+  <Toolbar  Id="ConfigToolbar" Style="ToolbarSmallStyle">   
+    <Label  Id="ConfigObjectName" TextFormat="1" ReadOnly="true"/>
+    <Button Id="DesignConfigurationToolbarCmd"/>
   </Toolbar>
   
 </Toolbars>
