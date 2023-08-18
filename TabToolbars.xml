@@ -66,7 +66,7 @@
     <!-- ******************************** -->
     &DebugPanels;
 
-            <!-- *********************************** -->
+                <!-- *********************************** -->
     <!-- ** Create Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
     <Panel Id="SketchCreatePanel" _LCLZId="lclzCREATE" _LCLZText="CREATE">
@@ -1066,7 +1066,7 @@
         <Button Id="WorkPlaneFromPointAndFaceCommand" />
         <Button Id="WorkPlaneAlongPathCommand" />
         <Button Id="WorkPlaneFromPointAndNormalCommand" />
-        <!--<Button Id="ConstructionPlanePointDirection" />-->
+        <Button Id="ConstructionPlanePointDirection" />
         <Separator />
         <Button Id="WorkAxisThroughCylinderCommand" />
         <Button Id="WorkAxisNormalToFaceCommand" />
@@ -1074,7 +1074,6 @@
         <Button Id="WorkAxisFromTwoPointsCommand" />
         <Button Id="WorkAxisFromLineCommand" />
         <Button Id="WorkAxisFromPointAndFaceCommand" />
--->
         <Separator />
         <Button Id="WorkPointFromPointCommand" />
         <Button Id="WorkPointFromTwoLinesCommand" />
@@ -1083,6 +1082,8 @@
         <Button Id="WorkPointFromLineAndPlaneCommand" />
         <Button Id="WorkPointAlongPathCommand" />
         <Button Id="WorkPointFromCoordsCommand" />
+        <Separator />
+        <Button Id="JointOrigin" />
       </PanelDropdown>
     </Panel>
 
