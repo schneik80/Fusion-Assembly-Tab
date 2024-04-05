@@ -47,12 +47,12 @@
     <Tab Id="Package3DTab" _LCLZId="lclzPackage3DTab" _LCLZText="Package" Panels="Package3DPanel;SelectPanel;StopPackagePanel" Environment="FusionSolidEnvironment" ContextualFinishId="Package3DStop" TabEnvironment="Package3DEnvironment"/>
     <Tab Id="LbrPackage3DTab" _LCLZId="lclzLbrPackage3DTab" _LCLZText="3D Package" Panels="PackagePanel;InspectPanel;SelectPanel;ReturnLibraryPanel" ContextualFinishId="ReturnLibrary" Environment="ElectronPackageEnvironment"/>
     <Tab Id="BasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID" Panels="SolidCreatePanel;SolidModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
-    <Tab Id="BasefeatureSurfaceTab" _LCLZId="lclzBaseFeatureSurfaceTab" _LCLZText="BASE FEATURE SURFACE" Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
+    <Tab Id="BasefeatureSurfaceTab" _LCLZId="lclzBaseFeatureSurfaceTab" _LCLZText="BASE FEATURE SURFACE" Panels="SurfaceCreatePanel;SurfaceModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
     <Tab Id="SketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH" Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel" Environment="FusionSolidEnvironment" ContextualFinishId="SketchStop" />
     <Tab Id="EditSnapshotTab" _LCLZId="lclzSnapshotTab" _LCLZText="POSITION" Panels="SnapshotSolidModifyPanel;InspectPanel;SelectPanel;FinishSnapshotEditPanel" Environment="FusionSolidEnvironment" ContextualFinishId="SnapshotEditAccept" />
     <Tab Id="PCBSketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH" Panels="PCB3DSketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel" Environment="PCB3DEnvironment" ContextualFinishId="SketchStop" />
-    <Tab Id="PCBBasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID" Panels="InspectPanel;SelectPanel;StopBaseFeaturePanel" Environment="PCB3DEnvironment" ContextualFinishId="BaseFeatureStop" />
 
+    <Tab Id="PCBBasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID" Panels="InspectPanel;SelectPanel;StopBaseFeaturePanel" Environment="PCB3DEnvironment" ContextualFinishId="BaseFeatureStop" />
 
     <!-- ***** -->
     <!-- Extras -->
@@ -68,7 +68,7 @@
     <!-- ******************************** -->
     &DebugPanels;
 
-                                <!-- *********************************** -->
+        <!-- *********************************** -->
     <!-- ** Create Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
     <Panel Id="SketchCreatePanel" _LCLZId="lclzCREATE" _LCLZText="CREATE">
@@ -135,6 +135,7 @@
         <DropDownButton _LCLZId="lclzProjectInclude" _LCLZText="Project / Include">
           <Button Id="ProjectNewCmd" />
           <Button Id="IntersectCmd" />
+          <Button Id="SpunProfileCmd" />
           <Separator />
           <Button Id="Include3DGeometry" />
           <Separator />
@@ -375,7 +376,7 @@
       <Controls>
         <Button Id="FusionCreateNewComponentCommand" />
         <Button Id="JointAssembleCmdNew" />
-        <Button Id="FusionFastenersCommand" />
+<Button Id="FusionFastenersCommand" />
         <Button Id="MaterializedBomCmd" />
       </Controls>
       <PanelDropdown>
@@ -422,6 +423,8 @@
         <Button Id="FusionMinimumRadiusAnalysisCommand" />
         <Button Id="FusionHalfSectionViewCommand" />
         <Button Id="FusionCenterOfMassCommand" />
+        <Button Id="FusionComponentConnectionAnalysisCommand" />
+        <Button Id="FusionEditComponentConnectionAnalysisCommand" />
         <Separator />
         <Button Id="DesignAdviceCmd" />
         <Separator />
@@ -488,6 +491,15 @@
         </DropDownButton>
         <Separator />
       </PanelDropdown>
+    </Panel>
+
+    <!-- ************************************ -->
+    <!-- ** Automate Panel (Design::Solid) ** -->
+    <!-- ************************************ -->
+    <Panel Id="AutomatePanel" _LCLZId="lclzAutomate" _LCLZText="Automate">
+      <Controls>
+        <Button Id="AutomatedModelingCommand" />
+      </Controls>
     </Panel>
 
     <!-- ************************************ -->
@@ -677,7 +689,7 @@
       </Controls>
       <PanelDropdown>
         <Button Id="FusionCreateNewComponentCommand" />
-        <Button Id="FusionFastenersCommand" />
+<Button Id="FusionFastenersCommand" />
         <DropDownButton _LCLZId="lclzPCBCreate" _LCLZText="Create PCB">
           <Button Id="PCBDeriveCmd" />
           <Button Id="PCBCreateCmd" />
@@ -736,11 +748,13 @@
         <Button Id="FusionZebraAnalysisCommand" />
         <Button Id="FusionDraftAnalysisCommand" />
         <Button Id="FusionCurvatureMapAnalysisCommand" />
-        <Button Id="FusionIsoCurveAnalysisCommand" />
+<Button Id="FusionIsoCurveAnalysisCommand" />
         <Button Id="FusionAccessibilityAnalysisCommand" />
         <Button Id="FusionMinimumRadiusAnalysisCommand" />
         <Button Id="FusionHalfSectionViewCommand" />
         <Button Id="FusionCenterOfMassCommand" />
+        <Button Id="FusionComponentConnectionAnalysisCommand" />
+        <Button Id="FusionEditComponentConnectionAnalysisCommand" />
         <Separator />
         <Button Id="FusionViewColorCyclingToggleCmd"/>
         <Button Id="FusionComputeAllCommand" />
@@ -1077,7 +1091,7 @@
         <Button Id="WorkPlaneFromPointAndFaceCommand" />
         <Button Id="WorkPlaneAlongPathCommand" />
         <Button Id="WorkPlaneFromPointAndNormalCommand" />
-        <Button Id="ConstructionPlanePointDirection" />
+        <!--<Button Id="ConstructionPlanePointDirection" />-->
         <Separator />
         <Button Id="WorkAxisThroughCylinderCommand" />
         <Button Id="WorkAxisNormalToFaceCommand" />
@@ -1085,6 +1099,7 @@
         <Button Id="WorkAxisFromTwoPointsCommand" />
         <Button Id="WorkAxisFromLineCommand" />
         <Button Id="WorkAxisFromPointAndFaceCommand" />
+-->
         <Separator />
         <Button Id="WorkPointFromPointCommand" />
         <Button Id="WorkPointFromTwoLinesCommand" />
@@ -1120,6 +1135,8 @@
         <Button Id="FusionMinimumRadiusAnalysisCommand" />
         <Button Id="FusionHalfSectionViewCommand" />
         <Button Id="FusionCenterOfMassCommand" />
+        <Button Id="FusionComponentConnectionAnalysisCommand" />
+        <Button Id="FusionEditComponentConnectionAnalysisCommand" />
         <Separator />
         <Button Id="FusionViewColorCyclingToggleCmd"/>
         <Button Id="FacegroupsToggleCmd"/>
@@ -1162,6 +1179,8 @@
         <Button Id="FusionMinimumRadiusAnalysisCommand" />
         <Button Id="FusionHalfSectionViewCommand" />
         <Button Id="FusionCenterOfMassCommand" />
+        <Button Id="FusionComponentConnectionAnalysisCommand" />
+        <Button Id="FusionEditComponentConnectionAnalysisCommand" />
         <Separator />
         <Button Id="FusionViewColorCyclingToggleCmd"/>
         <Button Id="FacegroupsToggleCmd"/>
