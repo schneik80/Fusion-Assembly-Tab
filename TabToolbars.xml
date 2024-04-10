@@ -521,12 +521,11 @@
     <!-- ********************************** -->
     <Panel Id="ASMModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
-        <Button Id="FusionPressPullCommand" />
-        <Button Id="FusionMoveCommand" />
+        <Button Id="AppearanceCommand" />
+        <Button Id="ChangeParameterCommand" />
+        <Button Id="FusionComputeAllCommand" />
       </Controls>
       <PanelDropdown>
-        <Button Id="FusionPressPullCommand" />
-        <Button Id="FusionMoveCommand" />
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
