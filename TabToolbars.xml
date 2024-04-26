@@ -22,8 +22,8 @@
     <!-- Persistent Tabs -->
     <!-- ************** -->
     <Tab Id="ASMTab" _LCLZId="lclzASMTab" _LCLZText="Assembly" Panels="AssemblePanel;ASMModifyPanel;ConfigurePanel;AssignPanel;ReleasePanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
-    <Tab Id="SolidTab" _LCLZId="lclzSolidTab" _LCLZText="SOLID" Panels="SolidCreatePanel;SolidModifyPanel;AssemblePanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
-    <Tab Id="SurfaceTab" _LCLZId="lclzSurfaceTab" _LCLZText="SURFACE" Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;AssemblePanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSurfaceEnvironment"/>
+    <Tab Id="SolidTab" _LCLZId="lclzSolidTab" _LCLZText="SOLID" Panels="SolidCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
+    <Tab Id="SurfaceTab" _LCLZId="lclzSurfaceTab" _LCLZText="SURFACE" Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSurfaceEnvironment"/>
 
 
     <!-- ************** -->
@@ -32,8 +32,8 @@
     <!-- ************** -->
     <Tab Id="FormTab" _LCLZId="lclzFormTab" _LCLZText="FORM" Panels="TSplinePrimitivePanel;TSplineModifyPanel;TSplineSymmetryPanel;TSplineUtilitiesPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopTSplineBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="TSplineBaseFeatureStop" TabEnvironment="TSplineEnvironment"/>
 
-    <Tab Id="SheetMetalTab" _LCLZId="lclzSheetMetalTab" _LCLZText="SHEET METAL" Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;AssemblePanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSheetMetalEnvironment"/>
-    <Tab Id="PlasticTab" _LCLZId="lclzPlasticPartsTab" _LCLZText="PLASTIC" Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;PlasticPartsAssemblePanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
+    <Tab Id="SheetMetalTab" _LCLZId="lclzSheetMetalTab" _LCLZText="SHEET METAL" Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSheetMetalEnvironment"/>
+    <Tab Id="PlasticTab" _LCLZId="lclzPlasticPartsTab" _LCLZText="PLASTIC" Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
     <Tab Id="ToolsTab" _LCLZId="lclzToolsTab" _LCLZText="UTILITIES" Panels="MakePanel;SolidScriptsAddinsPanel;UtilityPanel;ToolsInspectPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
     <Tab Id="ManageTab" _LCLZId="lclzManageTab" _LCLZText="MANAGE" Panels="AssignPanel;ReleasePanel;BomPanel;ManagePanel" Environment="FusionSolidEnvironment"/>
 
