@@ -21,7 +21,7 @@
     <!-- ************** -->
     <!-- Persistent Tabs -->
     <!-- ************** -->
-    <Tab Id="ASMTab" _LCLZId="lclzASMTab" _LCLZText="Assembly" Panels="AssemblePanel;ASMModifyPanel;ConfigurePanel;AssignPanel;ReleasePanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
+    <Tab Id="ASMTab" _LCLZId="lclzASMTab" _LCLZText="Assembly" Panels="AssemblePanel;MotionPanel;ASMModifyPanel;ConfigurePanel;ASMManagePanel;BOMPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
     <Tab Id="SolidTab" _LCLZId="lclzSolidTab" _LCLZText="SOLID" Panels="SolidCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
     <Tab Id="SurfaceTab" _LCLZId="lclzSurfaceTab" _LCLZText="SURFACE" Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSurfaceEnvironment"/>
 
@@ -517,7 +517,7 @@
     </Panel>
 
     <!-- ********************************** -->
-    <!-- ** Modify Panel (Design::ASM) ** -->
+    <!-- ** ASM Modify Panel (Design::ASM) ** -->
     <!-- ********************************** -->
     <Panel Id="ASMModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
@@ -543,8 +543,6 @@
         <Button Id="ChangeParameterCommand" />
         <Button Id="FusionComputeAllCommand" />
         <Button Id="FusionComputeUnresolvedCommand" />
-        <Separator />
-        <Button Id="MaterializedBomCmd" />
       </PanelDropdown>
     </Panel>
 
@@ -674,8 +672,6 @@
       </PanelDropdown>
     </Panel>
 
-
-
     <!-- *************************************** -->
     <!-- ** Assemble Panel (Design::Assemble) ** -->
     <!-- *************************************** -->
@@ -693,14 +689,27 @@
           <Button Id="PCBCreateCmd" />
         </DropDownButton>
         <Button Id="JointAssembleCmdNew" />
+        <Button Id="TransitionalRelationshipCmd" />
         <Button Id="FusionDuplicateWithJointsCommand" />
+        <Button Id="RigidGroupCmd" />
+        <Separator />
         <Button Id="JointAsBuiltCmd" />
         <Button Id="JointOrigin" />
-        <Button Id="RigidGroupCmd" />
-        <Button Id="TransitionalRelationshipCmd" />
-        <Separator />
+      </PanelDropdown>
+    </Panel>
+
+    <!-- ** Motion Panel (Design::Assemble) ** -->
+    <!-- *************************************** -->
+    <Panel Id="MotionPanel" _LCLZId="lclzMotion" _LCLZText="Motion">
+      <Controls>
         <Button Id="FusionMoveJointsCommand" />
         <Button Id="FusionMotionRelationshipCommand" />
+        <Button Id="FusionMotionStudyCommand" />
+      </Controls>
+      <PanelDropdown>
+        <Button Id="FusionMoveJointsCommand" />
+        <Button Id="FusionMotionRelationshipCommand" />
+        <Button Id="TransitionalRelationshipCmd" />
         <Separator />
         <Button Id="EnableContactSetsCmd" />
         <Button Id="EnableAllContactCmd" />
@@ -708,26 +717,33 @@
         <Button Id="ContactSetCmd" />
         <Separator />
         <Button Id="FusionMotionStudyCommand" />
-        <Separator />
-        <Button Id="MaterializedBomCmd" />
       </PanelDropdown>
     </Panel>
 
-
     <!-- ************************************* -->
-    <!-- ** Modify Panel (Design::Assemble) ** -->
+    <!-- ** ASMManage Panel (Design::Assemble) ** -->
     <!-- ************************************* -->
-    <Panel Id="AssembleModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
+    <Panel Id="ASMManagePanel" _LCLZId="lclzASMManage" _LCLZText="Manage">
       <Controls>
-        <Button Id="FusionMoveCommand" />
+        <Button Id="MaterializedBomCmd" />
+        <Button Id="PIMAssignItemNumberCmd" />
+        <Button Id="PIMGoToDashboardCmd" />
+        <Button Id="PIMGoToItemDetailsCmd" />
+        <Button Id="PIMGoToChangeOrderCmd" />
+
       </Controls>
       <PanelDropdown>
-        <Button Id="FusionMoveCommand" />
-        <Button Id="AlignCmd" />
-        <Button Id="FusionDeleteCommand" />
+          <Button Id="MaterializedBomCmd" />
+          <Separator />
+          <Button Id="PIMAssignItemNumberCmd" />
+          <Button Id="PIMQuickReleaseCmd" />
+          <Button Id="PIMECOReleaseCmd" />
+          <sepatator />
+        <Button Id="PIMGoToDashboardCmd" />
+        <Button Id="PIMGoToItemDetailsCmd" />
+        <Button Id="PIMGoToChangeOrderCmd" />
       </PanelDropdown>
     </Panel>
-
 
     <!-- ********************************************** -->
     <!-- ** Utility Panel (Design::Assemble)      ** -->
@@ -852,8 +868,6 @@
         <Button Id="FusionComputeUnresolvedCommand" />
       </PanelDropdown>
     </Panel>
-
-
 
 
     <!-- ************************************ -->
