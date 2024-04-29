@@ -8,16 +8,6 @@
 
     <DropDownButton Id="ActivateEnvironmentCommand" ShowText="true" SynchronizedWithCurrentItem="true" />
 
-    <!--
-        List of contextual tabs:
-            - Sketch
-            - Form
-            - Mesh
-            - PCB
-            - Basefeature
-    -->
-
-
     <!-- ************** -->
     <!-- Persistent Tabs -->
     <!-- ************** -->
@@ -27,14 +17,15 @@
 
 
     <!-- ************** -->
-    <!-- Two Contextual Tabs among the Persistent Tabs, -->
+    <!-- Contextual Tabs among the Persistent Tabs, -->
     <!-- because they persist while in Direct Modeling. -->
     <!-- ************** -->
     <Tab Id="FormTab" _LCLZId="lclzFormTab" _LCLZText="FORM" Panels="TSplinePrimitivePanel;TSplineModifyPanel;TSplineSymmetryPanel;TSplineUtilitiesPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopTSplineBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="TSplineBaseFeatureStop" TabEnvironment="TSplineEnvironment"/>
     <Tab Id="SheetMetalTab" _LCLZId="lclzSheetMetalTab" _LCLZText="SHEET METAL" Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSheetMetalEnvironment"/>
     <Tab Id="PlasticTab" _LCLZId="lclzPlasticPartsTab" _LCLZText="PLASTIC" Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
+    <Tab Id="PCBsTab" _LCLZId="lclzPCBPartsTab" _LCLZText="PCB" Panels="PCBsSetupPanel;PCBsCreatePanel;PCBsModifyPanel;InspectPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
+    <Tab Id="ManageTab" _LCLZId="lclzManageTab" _LCLZText="MANAGE" Panels="BomPanel;AssignPanel;ReleasePanel;ManagePanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
     <Tab Id="ToolsTab" _LCLZId="lclzToolsTab" _LCLZText="UTILITIES" Panels="MakePanel;SolidScriptsAddinsPanel;UtilityPanel;ToolsInspectPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
-    <Tab Id="ManageTab" _LCLZId="lclzManageTab" _LCLZText="MANAGE" Panels="AssignPanel;ReleasePanel;BomPanel;ManagePanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
 
 
     <!-- *********************************************** -->
@@ -68,7 +59,7 @@
     &DebugPanels;
 
 
-                <!-- *********************************** -->
+    <!-- *********************************** -->
     <!-- ** Create Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
     <Panel Id="SketchCreatePanel" _LCLZId="lclzCREATE" _LCLZText="CREATE">
@@ -364,11 +355,6 @@
         <Button Id="SurfaceSculpt" />
         <Separator />
         <Button Id="BaseFeatureCreationCommand" />
-        <DropDownButton _LCLZId="lclzPCBCreate" _LCLZText="Create PCB">
-          <Button Id="PCBDeriveCmd" />
-          <Button Id="PCBCreateCmd" />
-        </DropDownButton>
-        <Separator />
       </PanelDropdown>
     </Panel>
 
@@ -490,11 +476,6 @@
         <Button Id="EnclosureCommand" />
         <Separator />
         <Button Id="BaseFeatureCreationCommand" />
-        <DropDownButton _LCLZId="lclzPCBCreate" _LCLZText="Create PCB">
-          <Button Id="PCBDeriveCmd" />
-          <Button Id="PCBCreateCmd" />
-        </DropDownButton>
-        <Separator />
       </PanelDropdown>
     </Panel>
 
@@ -585,7 +566,6 @@
         <Button Id="FusionPartingLineSplitCmd" />
         <Separator />
         <Button Id="FusionMoveCommand" />
-        <Button Id="AlignCmd" />
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
@@ -667,7 +647,6 @@
         <Button Id="FusionChamferCommand" />
         <Separator />
         <Button Id="FusionMoveCommand" />
-        <Button Id="AlignCmd" />
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
@@ -697,10 +676,6 @@
         <Button Id="FusionImportCommandFromToolbar" />
         <Button Id="FusionFastenersCommand" />
         <Button Id="PullDeriveCommand" />
-        <DropDownButton _LCLZId="lclzPCBCreate" _LCLZText="Create PCB">
-          <Button Id="PCBDeriveCmd" />
-          <Button Id="PCBCreateCmd" />
-        </DropDownButton>
         <Separator />
         <Button Id="JointAssembleCmdNew" />
         <Button Id="TransitionalRelationshipCmd" />
@@ -872,7 +847,6 @@
         <Button Id="FusionSplitBodyCommand" />
         <Separator />
         <Button Id="FusionMoveCommand" />
-        <Button Id="AlignCmd" />
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
@@ -967,7 +941,6 @@
         </DropDownButton>
         <Separator />
         <Button Id="FusionMoveCommand" />
-        <Button Id="AlignCmd" />
         <Button Id="FusionDeleteCommand" />
         <Separator />
         <Button Id="PhysicalMaterialCommand"/>
@@ -1018,7 +991,7 @@
 
 
     <!-- ******************************** -->
-    <!-- ** Create Panel (Design::PCB) ** -->
+    <!-- ** 2DPCB Create Panel (Design::PCB) ** -->
     <!-- ******************************** -->
     <Panel Id="PCBCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
       <Controls>
@@ -1031,6 +1004,103 @@
         <Separator />
         <Button Id="PCBCreateCmd" />
         <Button Id="PCBDefineBoardCmd" />
+      </PanelDropdown>
+    </Panel>
+
+    <!-- ********************************** -->
+    <!-- ** Setup 3DPCBs (Design::PCB) ** -->
+    <!-- ********************************** -->
+    <Panel Id="PCBsSetupPanel" _LCLZId="lclzPCBsSetup" _LCLZText="Setup">
+      <Controls>
+        <Button Id="PCBDeriveCmd" />
+        <Button Id="PCBCreateCmd" />
+      </Controls>
+      <PanelDropdown>
+        <Button Id="PCBDeriveCmd" />
+        <Button Id="PCBCreateCmd" />
+        <Button Id="PCBMoveComponentsCmd" />
+      </PanelDropdown>
+    </Panel>
+
+    <!-- ********************************** -->
+    <!-- ** Create 3DPCBs (Design::PCB) ** -->
+    <!-- ********************************** -->
+    <Panel Id="PCBsCreatePanel" _LCLZId="lclzPCBsCreate" _LCLZText="Create">
+      <Controls>
+        <Button Id="SketchCreate" />
+        <Button Id="Extrude" />
+        <Button Id="Revolve" />
+        <Button Id="PatternRectangular" />
+      </Controls>
+      <PanelDropdown>
+        <Button Id="SketchCreate" />
+        <Button Id="PushDeriveCommand" />
+        <Separator />
+        <Button Id="Extrude" />
+        <Button Id="Revolve" />
+        <Button Id="Sweep" />
+        <Button Id="SolidLoft" />
+        <Separator />
+        <Button Id="FusionHoleCommand" />
+        <Separator />
+        <Button Id="PrimitiveBox" />
+        <Button Id="PrimitiveCylinder" />
+        <Separator />
+        <DropDownButton _LCLZId="lclzPattern" _LCLZText="Pattern">
+          <Button Id="PatternRectangular" />
+          <Button Id="PatternCircular" />
+          <Button Id="PatternOnPath" />
+        </DropDownButton>
+        <Button Id="MirrorCommand" />
+        <Separator />
+        <Button Id="FusionSurfaceThickenCommand" />
+        <Separator />
+        <Button Id="BaseFeatureCreationCommand" />
+      </PanelDropdown>
+    </Panel>
+
+    <!-- ********************************** -->
+    <!-- ** Modify PCBs (Design::PCB) ** -->
+    <!-- ********************************** -->
+    <Panel Id="PCBsModifyPanel" _LCLZId="lclzPCBsModify" _LCLZText="Modify">
+      <Controls>
+        <Button Id="FusionPressPullCommand" />
+        <Button Id="FusionFilletEdgesCommand" />
+        <Button Id="FusionCombineCommand" />
+        <Button Id="FusionSplitBodyCommand" />
+        <Button Id="FusionMoveCommand" />
+      </Controls>
+      <PanelDropdown>
+        <Button Id="FusionPressPullCommand" />
+        <Separator />
+        <Button Id="FusionFilletEdgesCommand" />
+        <Button Id="FusionChamferCommand" />
+        <Separator />
+        <Button Id="FusionShellBodyCommand" />
+        <Button Id="ModifyScale" />
+        <Button Id="FusionCombineCommand" />
+        <Button Id="FusionOffsetFacesCommand" />
+        <Button Id="FusionReplaceFaceCommand" />
+        <Button Id="FusionSplitFaceCommand" />
+        <Button Id="FusionSplitBodyCommand" />
+        <Separator />
+        <Button Id="FusionMoveCommand" />
+        <Button Id="FusionDeleteCommand" />
+        <Button Id="SoftDeleteCommand" />
+        <Separator />
+        <DropDownButton _LCLZId="lclzSimplify" _LCLZText="Simplify">
+          <Button Id="FusionRemoveFeaturesCommand" />
+          <Button Id="FusionRemoveFacesCommand" />
+          <Button Id="ReplaceWithPrimitivesCommand" />
+        </DropDownButton>
+        <Separator />
+        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="AppearanceCommand" />
+        <Button Id="MaterialCommand" />
+        <Separator />
+        <Button Id="ChangeParameterCommand" />
+        <Button Id="FusionComputeAllCommand" />
+        <Button Id="FusionComputeUnresolvedCommand" />
       </PanelDropdown>
     </Panel>
 
@@ -1137,7 +1207,6 @@
         <Button Id="WorkAxisFromTwoPointsCommand" />
         <Button Id="WorkAxisFromLineCommand" />
         <Button Id="WorkAxisFromPointAndFaceCommand" />
--->
         <Separator />
         <Button Id="WorkPointFromPointCommand" />
         <Button Id="WorkPointFromTwoLinesCommand" />
@@ -1232,7 +1301,6 @@
     <!-- ************************************** -->
     <Panel Id="InsertPanel" _LCLZId="lclzInsert" _LCLZText="Insert">
       <Controls>
-        <Button Id="FusionImportCommandFromToolbar" />
         <Button Id="FusionFastenersCommand"/>
         <Button Id="FusionAddCanvasCommand" />
       </Controls>
@@ -1422,7 +1490,6 @@
     <Panel Id="SnapshotSolidModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
         <Button Id="FusionMoveCommand" />
-        <Button Id="AlignCmd" />
       </Controls>
       <PanelDropdown>
         <Button Id="FusionPressPullCommand" />
@@ -1441,7 +1508,6 @@
         <Button Id="FusionPartingLineSplitCmd" />
         <Separator />
         <Button Id="FusionMoveCommand" />
-        <Button Id="AlignCmd" />
         <Button Id="FusionDeleteCommand" />
         <Separator />
         <Button Id="ChangeParameterCommand" />
