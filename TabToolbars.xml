@@ -68,7 +68,7 @@
     <!-- ******************************** -->
     &DebugPanels;
 
-            <!-- *********************************** -->
+                    <!-- *********************************** -->
     <!-- ** Create Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
     <Panel Id="SketchCreatePanel" _LCLZId="lclzCREATE" _LCLZText="CREATE">
@@ -373,12 +373,14 @@
     <Panel Id="PlasticPartsAssemblePanel" _LCLZId="lclzAssemble" _LCLZText="Assemble">
       <Controls>
         <Button Id="FusionCreateNewComponentCommand" />
+        <Button Id="FusionImportCommandFromToolbar" />
         <Button Id="JointAssembleCmdNew" />
         <Button Id="FusionFastenersCommand" />
         <Button Id="MaterializedBomCmd" />
       </Controls>
       <PanelDropdown>
         <Button Id="FusionCreateNewComponentCommand" />
+        <Button Id="FusionImportCommandFromToolbar" />
         <Button Id="JointAssembleCmdNew" />
         <Button Id="FusionDuplicateWithJointsCommand" />
         <Button Id="JointAsBuiltCmd" />
@@ -1178,6 +1180,7 @@
       </Controls>
       <PanelDropdown>
         <Button Id="MeasureCommand" />
+        <Button Id="InterferenceCheckCommand" />
         <Button Id="FusionSurfaceValidateCommand" />
         <Separator />
         <Button Id="FusionCurvatureCombAnalysisCommand" />
@@ -1202,18 +1205,21 @@
     <!-- ************************************** -->
     <Panel Id="InsertPanel" _LCLZId="lclzInsert" _LCLZText="Insert">
       <Controls>
+        <Button Id="FusionImportCommandFromToolbar" />
         <Button Id="FusionFastenersCommand"/>
         <Button Id="FusionAddCanvasCommand" />
       </Controls>
       <PanelDropdown>
+        <Button Id="FusionImportCommandFromToolbar" />
+        <Button Id="FusionFastenersCommand"/>
         <Button Id="InsertDialogCommand" />
         <Button Id="PullDeriveCommand" />
+        <Separator />
         <Button Id="FusionAddEditDecalCommand" />
         <Button Id="FusionAddCanvasCommand" />
         <Button Id="FusionAddBackgroundCanvasCommand" />
         <Separator />
         <Button Id="TSplineImportCommand" />
-        <Button Id="FusionFastenersCommand"/>
         <Button Id="SketchImportSVG" />
         <Button Id="ImportDxfFileCommand" />
         <Button Id="InsertMcMasterCarrComponentCommand" />
