@@ -68,7 +68,7 @@
     <!-- ******************************** -->
     &DebugPanels;
 
-        <!-- *********************************** -->
+            <!-- *********************************** -->
     <!-- ** Create Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
     <Panel Id="SketchCreatePanel" _LCLZId="lclzCREATE" _LCLZText="CREATE">
@@ -376,7 +376,7 @@
       <Controls>
         <Button Id="FusionCreateNewComponentCommand" />
         <Button Id="JointAssembleCmdNew" />
-<Button Id="FusionFastenersCommand" />
+        <Button Id="FusionFastenersCommand" />
         <Button Id="MaterializedBomCmd" />
       </Controls>
       <PanelDropdown>
@@ -683,7 +683,7 @@
       </Controls>
       <PanelDropdown>
         <Button Id="FusionCreateNewComponentCommand" />
-<Button Id="FusionFastenersCommand" />
+        <Button Id="FusionFastenersCommand" />
         <DropDownButton _LCLZId="lclzPCBCreate" _LCLZText="Create PCB">
           <Button Id="PCBDeriveCmd" />
           <Button Id="PCBCreateCmd" />
@@ -733,12 +733,12 @@
 
       </Controls>
       <PanelDropdown>
-          <Button Id="MaterializedBomCmd" />
-          <Separator />
-          <Button Id="PIMAssignItemNumberCmd" />
-          <Button Id="PIMQuickReleaseCmd" />
-          <Button Id="PIMECOReleaseCmd" />
-          <sepatator />
+        <Button Id="MaterializedBomCmd" />
+        <Separator />
+        <Button Id="PIMAssignItemNumberCmd" />
+        <Button Id="PIMQuickReleaseCmd" />
+        <Button Id="PIMECOReleaseCmd" />
+        <sepatator />
         <Button Id="PIMGoToDashboardCmd" />
         <Button Id="PIMGoToItemDetailsCmd" />
         <Button Id="PIMGoToChangeOrderCmd" />
@@ -762,7 +762,7 @@
         <Button Id="FusionZebraAnalysisCommand" />
         <Button Id="FusionDraftAnalysisCommand" />
         <Button Id="FusionCurvatureMapAnalysisCommand" />
-<Button Id="FusionIsoCurveAnalysisCommand" />
+        <Button Id="FusionIsoCurveAnalysisCommand" />
         <Button Id="FusionAccessibilityAnalysisCommand" />
         <Button Id="FusionMinimumRadiusAnalysisCommand" />
         <Button Id="FusionHalfSectionViewCommand" />
