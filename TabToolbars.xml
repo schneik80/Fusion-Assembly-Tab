@@ -6,49 +6,111 @@
 
   <CommandToolbar Id="FusionAssetType">
 
-    <DropDownButton Id="ActivateEnvironmentCommand" ShowText="true" SynchronizedWithCurrentItem="true" />
+    <DropDownButton Id="ActivateEnvironmentCommand" ShowText="true"
+      SynchronizedWithCurrentItem="true" />
 
-    <!-- ************** -->
+    <!-- *************** -->
     <!-- Persistent Tabs -->
-    <!-- ************** -->
-    <Tab Id="ASMTab" _LCLZId="lclzASMTab" _LCLZText="Assembly" Panels="AssemblePanel;MotionPanel;ASMModifyPanel;ConfigurePanel;ASMManagePanel;BOMPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
-    <Tab Id="SolidTab" _LCLZId="lclzSolidTab" _LCLZText="SOLID" Panels="SolidCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
-    <Tab Id="SurfaceTab" _LCLZId="lclzSurfaceTab" _LCLZText="SURFACE" Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSurfaceEnvironment"/>
+    <!-- *************** -->
+    <Tab Id="ASMTab" _LCLZId="lclzASMTab"
+      _LCLZText="Assembly"
+      Panels="AssemblePanel;MotionPanel;ASMModifyPanel;ConfigurePanel;ASMManagePanel;BOMPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+      Environment="FusionSolidEnvironment" />
+    <Tab Id="SolidTab" _LCLZId="lclzSolidTab"
+      _LCLZText="SOLID"
+      Panels="SolidCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+      Environment="FusionSolidEnvironment" />
+    <Tab Id="SurfaceTab" _LCLZId="lclzSurfaceTab"
+      _LCLZText="SURFACE"
+      Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel"
+      Environment="FusionSolidEnvironment" TabEnvironment="FusionSurfaceEnvironment" />
 
 
-    <!-- ************** -->
-    <!-- Contextual Tabs among the Persistent Tabs, -->
+    <!-- ********************************************** -->
+    <!--   Contextual Tabs among the Persistent Tabs,   -->
     <!-- because they persist while in Direct Modeling. -->
-    <!-- ************** -->
-    <Tab Id="FormTab" _LCLZId="lclzFormTab" _LCLZText="FORM" Panels="TSplinePrimitivePanel;TSplineModifyPanel;TSplineSymmetryPanel;TSplineUtilitiesPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopTSplineBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="TSplineBaseFeatureStop" TabEnvironment="TSplineEnvironment"/>
-    <Tab Id="SheetMetalTab" _LCLZId="lclzSheetMetalTab" _LCLZText="SHEET METAL" Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSheetMetalEnvironment"/>
-    <Tab Id="PlasticTab" _LCLZId="lclzPlasticPartsTab" _LCLZText="PLASTIC" Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;" Environment="FusionSolidEnvironment"/>
-    <Tab Id="PCBsTab" _LCLZId="lclzPCBPartsTab" _LCLZText="PCB" Panels="PCBsSetupPanel;PCBsCreatePanel;PCBsModifyPanel;InspectPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
-    <Tab Id="ManageTab" _LCLZId="lclzManageTab" _LCLZText="MANAGE" Panels="BomPanel;AssignPanel;ReleasePanel;ManagePanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
-    <Tab Id="ToolsTab" _LCLZId="lclzToolsTab" _LCLZText="UTILITIES" Panels="MakePanel;SolidScriptsAddinsPanel;UtilityPanel;ToolsInspectPanel;SelectPanel;SnapshotPanel" Environment="FusionSolidEnvironment"/>
+    <!-- ********************************************** -->
+    <Tab
+      Id="FormTab" _LCLZId="lclzFormTab" _LCLZText="FORM"
+      Panels="TSplinePrimitivePanel;TSplineModifyPanel;TSplineSymmetryPanel;TSplineUtilitiesPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopTSplineBaseFeaturePanel"
+      Environment="FusionSolidEnvironment" ContextualFinishId="TSplineBaseFeatureStop"
+      TabEnvironment="TSplineEnvironment" />
+    <Tab Id="SheetMetalTab" _LCLZId="lclzSheetMetalTab"
+      _LCLZText="SHEET METAL"
+      Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel"
+      Environment="FusionSolidEnvironment" TabEnvironment="FusionSheetMetalEnvironment" />
+    <Tab
+      Id="PlasticTab" _LCLZId="lclzPlasticPartsTab" _LCLZText="PLASTIC"
+      Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+      Environment="FusionSolidEnvironment" />
+    <Tab Id="PCBsTab" _LCLZId="lclzPCBPartsTab"
+      _LCLZText="PCB"
+      Panels="PCBsSetupPanel;PCBsCreatePanel;PCBsModifyPanel;InspectPanel;SelectPanel;SnapshotPanel"
+      Environment="FusionSolidEnvironment" />
+    <Tab Id="ManageTab" _LCLZId="lclzManageTab"
+      _LCLZText="MANAGE"
+      Panels="BomPanel;AssignPanel;ReleasePanel;ManagePanel;SelectPanel;SnapshotPanel"
+      Environment="FusionSolidEnvironment" />
+    <Tab Id="ToolsTab" _LCLZId="lclzToolsTab"
+      _LCLZText="UTILITIES"
+      Panels="MakePanel;SolidScriptsAddinsPanel;UtilityPanel;ToolsInspectPanel;SelectPanel;SnapshotPanel"
+      Environment="FusionSolidEnvironment" />
 
 
-    <!-- *********************************************** -->
+    <!-- ************************************************* -->
     <!-- Contextual Tabs which are always contextual       -->
     <!-- ContextID specifies the button that activates it. -->
-    <!-- *********************************************** -->
-    <Tab Id="PCBTab" _LCLZId="lclzPCBTab" _LCLZText="PCB" Panels="PCBCreatePanel;PCBModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopPCBPanel" Environment="FusionSolidEnvironment" ContextualFinishId="PCBStop" />
-    <Tab Id="PCB3DTab" _LCLZId="lclzPCB3DTab" _LCLZText="3D PCB" Panels="PCB3DCreatePanel;PCB3DModifyPanel;InspectPanel;PCBConfigPanel;SelectPanel" Environment="PCB3DEnvironment" />
-    <Tab Id="Package3DTab" _LCLZId="lclzPackage3DTab" _LCLZText="Package" Panels="Package3DPanel;SelectPanel;StopPackagePanel" Environment="FusionSolidEnvironment" ContextualFinishId="Package3DStop" TabEnvironment="Package3DEnvironment"/>
-    <Tab Id="LbrPackage3DTab" _LCLZId="lclzLbrPackage3DTab" _LCLZText="3D Package" Panels="PackagePanel;InspectPanel;SelectPanel;ReturnLibraryPanel" ContextualFinishId="ReturnLibrary" Environment="ElectronPackageEnvironment"/>
-    <Tab Id="BasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID" Panels="SolidCreatePanel;SolidModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
-    <Tab Id="BasefeatureSurfaceTab" _LCLZId="lclzBaseFeatureSurfaceTab" _LCLZText="BASE FEATURE SURFACE" Panels="SurfaceCreatePanel;SurfaceModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel" Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
-    <Tab Id="SketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH" Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel" Environment="FusionSolidEnvironment" ContextualFinishId="SketchStop" />
-    <Tab Id="EditSnapshotTab" _LCLZId="lclzSnapshotTab" _LCLZText="POSITION" Panels="SnapshotSolidModifyPanel;InspectPanel;SelectPanel;FinishSnapshotEditPanel" Environment="FusionSolidEnvironment" ContextualFinishId="SnapshotEditAccept" />
-    <Tab Id="PCBSketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH" Panels="PCB3DSketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel" Environment="PCB3DEnvironment" ContextualFinishId="SketchStop" />
-    <Tab Id="PCBBasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID" Panels="InspectPanel;SelectPanel;StopBaseFeaturePanel" Environment="PCB3DEnvironment" ContextualFinishId="BaseFeatureStop" />
+    <!-- ************************************************* -->
+    <Tab Id="PCBTab" _LCLZId="lclzPCBTab" _LCLZText="PCB"
+      Panels="PCBCreatePanel;PCBModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopPCBPanel"
+      Environment="FusionSolidEnvironment" ContextualFinishId="PCBStop" />
+    <Tab Id="PCB3DTab"
+      _LCLZId="lclzPCB3DTab" _LCLZText="3D PCB"
+      Panels="PCB3DCreatePanel;PCB3DModifyPanel;InspectPanel;PCBConfigPanel;SelectPanel"
+      Environment="PCB3DEnvironment" />
+    <Tab Id="Package3DTab" _LCLZId="lclzPackage3DTab"
+      _LCLZText="Package" Panels="Package3DPanel;SelectPanel;StopPackagePanel"
+      Environment="FusionSolidEnvironment" ContextualFinishId="Package3DStop"
+      TabEnvironment="Package3DEnvironment" />
+    <Tab Id="LbrPackage3DTab"
+      _LCLZId="lclzLbrPackage3DTab" _LCLZText="3D Package"
+      Panels="PackagePanel;InspectPanel;SelectPanel;ReturnLibraryPanel"
+      ContextualFinishId="ReturnLibrary" Environment="ElectronPackageEnvironment" />
+    <Tab
+      Id="BasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID"
+      Panels="SolidCreatePanel;SolidModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel"
+      Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
+    <Tab
+      Id="BasefeatureSurfaceTab" _LCLZId="lclzBaseFeatureSurfaceTab"
+      _LCLZText="BASE FEATURE SURFACE"
+      Panels="SurfaceCreatePanel;SurfaceModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel"
+      Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
+    <Tab
+      Id="SketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH"
+      Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel"
+      Environment="FusionSolidEnvironment" ContextualFinishId="SketchStop" />
+    <Tab
+      Id="EditSnapshotTab" _LCLZId="lclzSnapshotTab" _LCLZText="POSITION"
+      Panels="SnapshotSolidModifyPanel;InspectPanel;SelectPanel;FinishSnapshotEditPanel"
+      Environment="FusionSolidEnvironment" ContextualFinishId="SnapshotEditAccept" />
+    <Tab
+      Id="PCBSketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH"
+      Panels="PCB3DSketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel"
+      Environment="PCB3DEnvironment" ContextualFinishId="SketchStop" />
+    <Tab
+      Id="PCBBasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID"
+      Panels="InspectPanel;SelectPanel;StopBaseFeaturePanel" Environment="PCB3DEnvironment"
+      ContextualFinishId="BaseFeatureStop" />
 
 
     <!-- ***** -->
     <!-- Extras -->
     <!-- ***** -->
-    <Tab Id="RenderTab" _LCLZId="lclzRenderTab" _LCLZText="RENDER" Panels="RenderSetupPanel;InCanvasRenderPanel;RenderPanel" Environment="FusionRenderEnvironment"/>
-    <Tab Id="DebugTab" _LCLZId="lclzDebugTab" _LCLZText="DEBUG" Panels="FilePanel;DiagnosticsPanel;UIDemo" Environment="DebugEnvironment"/>
+    <Tab Id="RenderTab" _LCLZId="lclzRenderTab"
+      _LCLZText="RENDER" Panels="RenderSetupPanel;InCanvasRenderPanel;RenderPanel"
+      Environment="FusionRenderEnvironment" />
+    <Tab Id="DebugTab" _LCLZId="lclzDebugTab"
+      _LCLZText="DEBUG" Panels="FilePanel;DiagnosticsPanel;UIDemo" Environment="DebugEnvironment" />
 
 
     <!-- ******************************** -->
@@ -57,8 +119,8 @@
     <!-- **                            ** -->
     <!-- ******************************** -->
     &DebugPanels;
-
-
+    
+    
     <!-- *********************************** -->
     <!-- ** Create Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
@@ -71,7 +133,7 @@
         <Button Id="MirrorSketchCommand" />
         <Button Id="SketchDimension" />
       </Controls>
-      <PanelDropdown  >
+      <PanelDropdown>
         <Button Id="DrawPolyline" />
         <DropDownButton _LCLZId="lclzRectangle" _LCLZText="Rectangle">
           <Button Id="ShapeRectangleTwoPoint" />
@@ -89,7 +151,8 @@
           <Button Id="ArcThreePoint" />
           <Button Id="ArcCenterTwoPoint" />
           <Button Id="ArcTangent" />
-          <!--<Button Id="ArcLength" />
+          <!--<Button
+          Id="ArcLength" />
           <Button Id="ArcCenterAngle" /> -->
         </DropDownButton>
         <DropDownButton _LCLZId="lclzPolygon" _LCLZText="Polygon">
@@ -111,7 +174,8 @@
           <Button Id="DrawCVMSpline3D" />
           <Button Id="DrawCVMSpline5D" />
         </DropDownButton>
-        <!--<Button Id="DrawCoil" />-->
+        <!--<Button
+        Id="DrawCoil" />-->
         <Button Id="ConicCurveCmd" />
         <Button Id="DrawPoint" />
         <Button Id="TextCmd" />
@@ -120,8 +184,8 @@
         <Button Id="FitCurvesToSectionCommand" />
         <Separator />
         <Button Id="MirrorSketchCommand" />
-        <Button Id="CircularSketchPatternCommand"/>
-        <Button Id="RectangularSketchPatternCommand"/>
+        <Button Id="CircularSketchPatternCommand" />
+        <Button Id="RectangularSketchPatternCommand" />
         <Separator />
         <DropDownButton _LCLZId="lclzProjectInclude" _LCLZText="Project / Include">
           <Button Id="ProjectNewCmd" />
@@ -140,10 +204,11 @@
     </Panel>
 
 
-    <!-- *********************************** -->
+    <!-- ****************************************************** -->
     <!-- ** Create Panel (PCB3D environment: Design::Sketch) ** -->
-    <!-- *********************************** -->
-    <Panel Id="PCB3DSketchCreatePanel" _LCLZId="lclzCREATE" _LCLZText="CREATE">
+    <!-- ****************************************************** -->
+    <Panel Id="PCB3DSketchCreatePanel"
+      _LCLZId="lclzCREATE" _LCLZText="CREATE">
       <Controls>
         <Button Id="DrawPolyline" />
         <Button Id="ShapeRectangleTwoPoint" />
@@ -152,7 +217,7 @@
         <Button Id="MirrorSketchCommand" />
         <Button Id="SketchDimension" />
       </Controls>
-      <PanelDropdown  >
+      <PanelDropdown>
         <Button Id="DrawPolyline" />
         <DropDownButton _LCLZId="lclzRectangle" _LCLZText="Rectangle">
           <Button Id="ShapeRectangleTwoPoint" />
@@ -170,7 +235,8 @@
           <Button Id="ArcThreePoint" />
           <Button Id="ArcCenterTwoPoint" />
           <Button Id="ArcTangent" />
-          <!--<Button Id="ArcLength" />
+          <!--<Button
+          Id="ArcLength" />
           <Button Id="ArcCenterAngle" /> -->
         </DropDownButton>
         <DropDownButton _LCLZId="lclzPolygon" _LCLZText="Polygon">
@@ -189,7 +255,8 @@
           <Button Id="DrawCVMSpline3D" />
         </DropDownButton>
         <!-- <Button Id="ShapeSlotCenterRadius" /> -->
-        <!--<Button Id="DrawCoil" />-->
+        <!--<Button
+        Id="DrawCoil" />-->
         <Button Id="ConicCurveCmd" />
         <Button Id="DrawPoint" />
         <Button Id="TextCmd" />
@@ -197,8 +264,8 @@
         <Separator />
         <Separator />
         <Button Id="MirrorSketchCommand" />
-        <Button Id="CircularSketchPatternCommand"/>
-        <Button Id="RectangularSketchPatternCommand"/>
+        <Button Id="CircularSketchPatternCommand" />
+        <Button Id="RectangularSketchPatternCommand" />
         <Separator />
         <DropDownButton _LCLZId="lclzProjectInclude" _LCLZText="Project / Include">
           <Button Id="ProjectNewCmd" />
@@ -219,14 +286,15 @@
     <!-- *********************************** -->
     <!-- ** Modify Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
-    <Panel Id="SketchModifyPanel" _LCLZId="lclzMODIFY" _LCLZText="MODIFY">
+    <Panel Id="SketchModifyPanel"
+      _LCLZId="lclzMODIFY" _LCLZText="MODIFY">
       <Controls>
         <Button Id="FilletSketchCmd" />
         <Button Id="TrimSketchCmd" />
         <Button Id="Offset" />
         <Button Id="BlendG1CurveSketchCmd" />
       </Controls>
-      <PanelDropdown  >
+      <PanelDropdown>
         <Button Id="FilletSketchCmd" />
         <DropDownButton _LCLZId="lclzSketchChamfer" _LCLZText="Chamfer">
           <Button Id="ChamferSketchEqualDistance" />
@@ -250,7 +318,8 @@
     <!-- **************************************** -->
     <!-- ** Constraints Panel (Design::Sketch) ** -->
     <!-- **************************************** -->
-    <Panel Id="SketchConstraintsPanel" _LCLZId="lclzCONSTRAINTS" _LCLZText="CONSTRAINTS">
+    <Panel
+      Id="SketchConstraintsPanel" _LCLZId="lclzCONSTRAINTS" _LCLZText="CONSTRAINTS">
       <Controls>
         <Button Id="ConstraintHorizontalVertical" />
         <Button Id="ConstraintCoincident" />
@@ -282,10 +351,11 @@
     </Panel>
 
 
-    <!-- ********************************** -->
+    <!-- ***************************************** -->
     <!-- ** Setup Panel (Design::Plastic Parts) ** -->
-    <!-- ********************************** -->
-    <Panel Id="PlasticPartsSetupPanel" _LCLZId="lclzSetup" _LCLZText="Setup">
+    <!-- ***************************************** -->
+    <Panel
+      Id="PlasticPartsSetupPanel" _LCLZId="lclzSetup" _LCLZText="Setup">
       <Controls>
         <Button Id="FusionAssignPlasticRuleCommand" />
         <Button Id="FusionManagePlasticRuleCommand" />
@@ -293,10 +363,11 @@
     </Panel>
 
 
-    <!-- ********************************** -->
+    <!-- ****************************************** -->
     <!-- ** Create Panel (Design::Plastic Parts) ** -->
-    <!-- ********************************** -->
-    <Panel Id="PlasticPartsCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
+    <!-- ****************************************** -->
+    <Panel
+      Id="PlasticPartsCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
       <Controls>
         <Button Id="SketchCreate" />
         <Button Id="Extrude" />
@@ -358,46 +429,14 @@
       </PanelDropdown>
     </Panel>
 
-
-    <!-- *************************************** -->
-    <!-- ** Assemble Panel (Design::Plastic Parts Assemble) ** -->
-    <!-- *************************************** -->
-    <Panel Id="PlasticPartsAssemblePanel" _LCLZId="lclzAssemble" _LCLZText="Assemble">
-      <Controls>
-        <Button Id="FusionCreateNewComponentCommand" />
-        <Button Id="FusionFastenersCommand" />
-        <Button Id="MaterializedBomCmd" />
-      </Controls>
-      <PanelDropdown>
-        <Button Id="FusionCreateNewComponentCommand" />
-        <Button Id="JointAssembleCmdNew" />
-        <Button Id="FusionDuplicateWithJointsCommand" />
-        <Button Id="JointAsBuiltCmd" />
-        <Button Id="JointOrigin" />
-        <Button Id="RigidGroupCmd" />
-        <Separator />
-        <Button Id="FusionMoveJointsCommand" />
-        <Button Id="FusionMotionRelationshipCommand" />
-        <Separator />
-        <Button Id="EnableContactSetsCmd" />
-        <Button Id="EnableAllContactCmd" />
-        <Button Id="DisableAllContactCmd" />
-        <Button Id="ContactSetCmd" />
-        <Separator />
-        <Button Id="FusionMotionStudyCommand" />
-        <Separator />
-        <Button Id="MaterializedBomCmd" />
-      </PanelDropdown>
-    </Panel>
-
-
-    <!-- ************************************** -->
+    <!-- ******************************************* -->
     <!-- ** Inspect Panel (Design::Plastic Parts) ** -->
-    <!-- ************************************** -->
-    <Panel Id="PlasticPartsInspectPanel" _LCLZId="lclzInspect" _LCLZText="Inspect">
+    <!-- ******************************************* -->
+    <Panel
+      Id="PlasticPartsInspectPanel" _LCLZId="lclzInspect" _LCLZText="Inspect">
       <Controls>
         <Button Id="MeasureCommand" />
-        <Button Id="DesignAdviceCmd"/>
+        <Button Id="DesignAdviceCmd" />
       </Controls>
       <PanelDropdown>
         <Button Id="MeasureCommand" />
@@ -418,8 +457,8 @@
         <Separator />
         <Button Id="DesignAdviceCmd" />
         <Separator />
-        <Button Id="FusionViewColorCyclingToggleCmd"/>
-        <Button Id="FacegroupsToggleCmd"/>
+        <Button Id="FusionViewColorCyclingToggleCmd" />
+        <Button Id="FacegroupsToggleCmd" />
       </PanelDropdown>
     </Panel>
 
@@ -427,7 +466,8 @@
     <!-- ********************************** -->
     <!-- ** Create Panel (Design::Solid) ** -->
     <!-- ********************************** -->
-    <Panel Id="SolidCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
+    <Panel
+      Id="SolidCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
       <Controls>
         <Button Id="SketchCreate" />
         <Button Id="Extrude" />
@@ -483,17 +523,19 @@
     <!-- ************************************ -->
     <!-- ** Automate Panel (Design::Solid) ** -->
     <!-- ************************************ -->
-    <Panel Id="AutomatePanel" _LCLZId="lclzAutomate" _LCLZText="Automate">
+    <Panel
+      Id="AutomatePanel" _LCLZId="lclzAutomate" _LCLZText="Automate">
       <Controls>
         <Button Id="AutomatedModelingCommand" />
       </Controls>
     </Panel>
 
 
-    <!-- ************************************ -->
+    <!-- ************************************* -->
     <!-- ** Configure Panel (Design::Solid) ** -->
-    <!-- ************************************ -->
-    <Panel Id="ConfigurePanel" _LCLZId="lclzConfigure" _LCLZText="Configure">
+    <!-- ************************************* -->
+    <Panel
+      Id="ConfigurePanel" _LCLZId="lclzConfigure" _LCLZText="Configure">
       <Controls>
         <Button Id="FusionStartDesignConfigModeCmd" />
         <Button Id="FusionShowDesignConfigPanelCmd" />
@@ -505,10 +547,11 @@
     </Panel>
 
 
-    <!-- ********************************** -->
+    <!-- ************************************ -->
     <!-- ** ASM Modify Panel (Design::ASM) ** -->
-    <!-- ********************************** -->
-    <Panel Id="ASMModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
+    <!-- ************************************ -->
+    <Panel
+      Id="ASMModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
         <Button Id="AppearanceCommand" />
         <Button Id="ChangeParameterCommand" />
@@ -518,14 +561,14 @@
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
-        <Button Id="ArrangeCommand"/>
+        <Button Id="ArrangeCommand" />
         <DropDownButton _LCLZId="lclzSimplify" _LCLZText="Simplify">
           <Button Id="FusionRemoveFeaturesCommand" />
           <Button Id="FusionRemoveFacesCommand" />
           <Button Id="ReplaceWithPrimitivesCommand" />
         </DropDownButton>
         <Separator />
-        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="PhysicalMaterialCommand" />
         <Button Id="AppearanceCommand" />
         <Button Id="MaterialCommand" />
         <Separator />
@@ -539,7 +582,8 @@
     <!-- ********************************** -->
     <!-- ** Modify Panel (Design::Solid) ** -->
     <!-- ********************************** -->
-    <Panel Id="SolidModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
+    <Panel
+      Id="SolidModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
         <Button Id="FusionPressPullCommand" />
         <Button Id="FusionFilletEdgesCommand" />
@@ -569,16 +613,16 @@
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
-        <Button Id="ArrangeCommand"/>
+        <Button Id="ArrangeCommand" />
         <DropDownButton _LCLZId="lclzSimplify" _LCLZText="Simplify">
           <Button Id="FusionRemoveFeaturesCommand" />
           <Button Id="FusionRemoveFacesCommand" />
           <Button Id="ReplaceWithPrimitivesCommand" />
         </DropDownButton>
         <Separator />
-        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="PhysicalMaterialCommand" />
         <Button Id="AppearanceCommand" />
-        <Button Id="VolFieldCreateLatticeCmd"/>
+        <Button Id="VolFieldCreateLatticeCmd" />
         <Button Id="MaterialCommand" />
         <Separator />
         <Button Id="ChangeParameterCommand" />
@@ -593,7 +637,8 @@
     <!-- **************************************** -->
     <!-- ** Create Panel (Design::Sheet Metal) ** -->
     <!-- **************************************** -->
-    <Panel Id="SheetMetalCreatePanel" _LCLZId="lclzSheetMetal" _LCLZText="Create">
+    <Panel
+      Id="SheetMetalCreatePanel" _LCLZId="lclzSheetMetal" _LCLZText="Create">
       <Controls>
         <Button Id="FusionCreateNewComponentCommand" />
         <Button Id="SketchCreate" />
@@ -632,7 +677,8 @@
     <!-- **************************************** -->
     <!-- ** Modify Panel (Design::Sheet Metal) ** -->
     <!-- **************************************** -->
-    <Panel Id="SheetMetalModifyPanel" _LCLZId="lclzSheetmetalModify" _LCLZText="Modify">
+    <Panel
+      Id="SheetMetalModifyPanel" _LCLZId="lclzSheetmetalModify" _LCLZText="Modify">
       <Controls>
         <Button Id="FusionSheetMetalRulesCommand" />
         <Button Id="FusionFilletEdgesCommand" />
@@ -650,7 +696,7 @@
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
-        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="PhysicalMaterialCommand" />
         <Button Id="AppearanceCommand" />
         <Button Id="MaterialCommand" />
         <Separator />
@@ -665,11 +711,13 @@
     <!-- *************************************** -->
     <!-- ** Assemble Panel (Design::Assemble) ** -->
     <!-- *************************************** -->
-    <Panel Id="AssemblePanel" _LCLZId="lclzAssemble" _LCLZText="Assemble">
+    <Panel Id="AssemblePanel"
+      _LCLZId="lclzAssemble" _LCLZText="Assemble">
       <Controls>
         <Button Id="FusionCreateNewComponentCommand" />
         <Button Id="FusionImportCommandFromToolbar" />
         <Button Id="JointAssembleCmdNew" />
+        <Button Id="FusionDuplicateWithJointsCommand" />
       </Controls>
       <PanelDropdown>
         <Button Id="FusionCreateNewComponentCommand" />
@@ -690,9 +738,10 @@
 
 
     <!-- *************************************** -->
-    <!-- ** Motion Panel (Design::Assemble) ** -->
+    <!-- **  Motion Panel (Design::Assemble)  ** -->
     <!-- *************************************** -->
-    <Panel Id="MotionPanel" _LCLZId="lclzMotion" _LCLZText="Motion">
+    <Panel
+      Id="MotionPanel" _LCLZId="lclzMotion" _LCLZText="Motion">
       <Controls>
         <Button Id="FusionMoveJointsCommand" />
         <Button Id="FusionMotionRelationshipCommand" />
@@ -713,10 +762,11 @@
     </Panel>
 
 
-    <!-- ************************************* -->
+    <!-- **************************************** -->
     <!-- ** ASMManage Panel (Design::Assemble) ** -->
-    <!-- ************************************* -->
-    <Panel Id="ASMManagePanel" _LCLZId="lclzASMManage" _LCLZText="Manage">
+    <!-- **************************************** -->
+    <Panel
+      Id="ASMManagePanel" _LCLZId="lclzASMManage" _LCLZText="Manage">
       <Controls>
         <Button Id="MaterializedBomCmd" />
         <Button Id="PIMAssignItemNumberCmd" />
@@ -739,10 +789,11 @@
 
 
     <!-- ********************************************** -->
-    <!-- ** Utility Panel (Design::Assemble)      ** -->
+    <!-- **    Utility Panel (Design::Assemble)      ** -->
     <!-- ** Items that does not affect the geometry  ** -->
     <!-- ********************************************** -->
-    <Panel Id="AssembleUtilityPanel" _LCLZId="lclzUtility" _LCLZText="Utility">
+    <Panel
+      Id="AssembleUtilityPanel" _LCLZId="lclzUtility" _LCLZText="Utility">
       <Controls>
         <Button Id="MeasureCommand" />
       </Controls>
@@ -763,7 +814,7 @@
         <Button Id="FusionComponentConnectionAnalysisCommand" />
         <Button Id="FusionEditComponentConnectionAnalysisCommand" />
         <Separator />
-        <Button Id="FusionViewColorCyclingToggleCmd"/>
+        <Button Id="FusionViewColorCyclingToggleCmd" />
         <Button Id="FusionComputeAllCommand" />
         <Button Id="FusionComputeUnresolvedCommand" />
         <Button Id="ChangeParameterCommand" />
@@ -774,7 +825,8 @@
     <!-- ************************************ -->
     <!-- ** Create Panel (Design::Surface) ** -->
     <!-- ************************************ -->
-    <Panel Id="SurfaceCreatePanel" _LCLZId="lclzSurface" _LCLZText="Create">
+    <Panel
+      Id="SurfaceCreatePanel" _LCLZId="lclzSurface" _LCLZText="Create">
       <Controls>
         <Button Id="SketchCreate" />
         <Button Id="FusionSurfacePatchCommand" />
@@ -821,7 +873,8 @@
     <!-- ************************************ -->
     <!-- ** Modify Panel (Design::Surface) ** -->
     <!-- ************************************ -->
-    <Panel Id="SurfaceModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
+    <Panel
+      Id="SurfaceModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
         <Button Id="FusionSurfaceStitchCommand" />
         <Button Id="FusionSurfaceUnStitchCommand" />
@@ -852,7 +905,7 @@
         <Separator />
         <Button Id="TSpline2BRepCommand" />
         <Separator />
-        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="PhysicalMaterialCommand" />
         <Button Id="AppearanceCommand" />
         <Button Id="MaterialCommand" />
         <Separator />
@@ -866,7 +919,8 @@
     <!-- ************************************ -->
     <!-- ** Create Panel (Design::TSpline) ** -->
     <!-- ************************************ -->
-    <Panel Id="TSplinePrimitivePanel" _LCLZId="lclzTSplineCreate" _LCLZText="Create">
+    <Panel
+      Id="TSplinePrimitivePanel" _LCLZId="lclzTSplineCreate" _LCLZText="Create">
       <Controls>
         <Button Id="FusionCreateNewComponentCommand" />
         <Button Id="SketchCreate" />
@@ -901,7 +955,8 @@
     <!-- *********************************** -->
     <!-- ** Modify Panel (Design::TSpline)** -->
     <!-- *********************************** -->
-    <Panel Id="TSplineModifyPanel" _LCLZId="lclzTSplineModify" _LCLZText="Modify">
+    <Panel Id="TSplineModifyPanel"
+      _LCLZId="lclzTSplineModify" _LCLZText="Modify">
       <Controls>
         <Button Id="TSplineEditCommand" />
       </Controls>
@@ -943,7 +998,7 @@
         <Button Id="FusionMoveCommand" />
         <Button Id="FusionDeleteCommand" />
         <Separator />
-        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="PhysicalMaterialCommand" />
         <Button Id="AppearanceCommand" />
         <Button Id="MaterialCommand" />
       </PanelDropdown>
@@ -953,7 +1008,8 @@
     <!-- ************************************** -->
     <!-- ** Symmetry Panel (Design::TSpline) ** -->
     <!-- ************************************** -->
-    <Panel Id="TSplineSymmetryPanel" _LCLZId="lclzTSplineSymmetry" _LCLZText="Symmetry">
+    <Panel
+      Id="TSplineSymmetryPanel" _LCLZId="lclzTSplineSymmetry" _LCLZText="Symmetry">
       <Controls>
         <Button Id="TSplineInternalMirrorSymmetryCmd" />
       </Controls>
@@ -973,7 +1029,8 @@
     <!-- ************************************** -->
     <!-- ** Utilities Panel (Design::TSpline)** -->
     <!-- ************************************** -->
-    <Panel Id="TSplineUtilitiesPanel" _LCLZId="lclzTSplineUtilities" _LCLZText="Utilities">
+    <Panel
+      Id="TSplineUtilitiesPanel" _LCLZId="lclzTSplineUtilities" _LCLZText="Utilities">
       <Controls>
         <Button Id="TSplineToggleTessModeCmd" />
       </Controls>
@@ -991,26 +1048,10 @@
 
 
     <!-- ******************************** -->
-    <!-- ** 2DPCB Create Panel (Design::PCB) ** -->
-    <!-- ******************************** -->
-    <Panel Id="PCBCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
-      <Controls>
-        <Button Id="FusionCreateNewComponentCommand" />
-        <Button Id="PCBCreateCmd" />
-        <Button Id="PCBDefineBoardCmd" />
-      </Controls>
-      <PanelDropdown>
-        <Button Id="FusionCreateNewComponentCommand" />
-        <Separator />
-        <Button Id="PCBCreateCmd" />
-        <Button Id="PCBDefineBoardCmd" />
-      </PanelDropdown>
-    </Panel>
-
-    <!-- ********************************** -->
     <!-- ** Setup 3DPCBs (Design::PCB) ** -->
-    <!-- ********************************** -->
-    <Panel Id="PCBsSetupPanel" _LCLZId="lclzPCBsSetup" _LCLZText="Setup">
+    <!-- ******************************** -->
+    <Panel
+      Id="PCBsSetupPanel" _LCLZId="lclzPCBsSetup" _LCLZText="Setup">
       <Controls>
         <Button Id="PCBDeriveCmd" />
         <Button Id="PCBCreateCmd" />
@@ -1022,10 +1063,11 @@
       </PanelDropdown>
     </Panel>
 
-    <!-- ********************************** -->
+    <!-- ********************************* -->
     <!-- ** Create 3DPCBs (Design::PCB) ** -->
-    <!-- ********************************** -->
-    <Panel Id="PCBsCreatePanel" _LCLZId="lclzPCBsCreate" _LCLZText="Create">
+    <!-- ********************************* -->
+    <Panel
+      Id="PCBsCreatePanel" _LCLZId="lclzPCBsCreate" _LCLZText="Create">
       <Controls>
         <Button Id="SketchCreate" />
         <Button Id="Extrude" />
@@ -1059,10 +1101,11 @@
       </PanelDropdown>
     </Panel>
 
-    <!-- ********************************** -->
+    <!-- ******************************* -->
     <!-- ** Modify PCBs (Design::PCB) ** -->
-    <!-- ********************************** -->
-    <Panel Id="PCBsModifyPanel" _LCLZId="lclzPCBsModify" _LCLZText="Modify">
+    <!-- ******************************* -->
+    <Panel
+      Id="PCBsModifyPanel" _LCLZId="lclzPCBsModify" _LCLZText="Modify">
       <Controls>
         <Button Id="FusionPressPullCommand" />
         <Button Id="FusionFilletEdgesCommand" />
@@ -1094,7 +1137,7 @@
           <Button Id="ReplaceWithPrimitivesCommand" />
         </DropDownButton>
         <Separator />
-        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="PhysicalMaterialCommand" />
         <Button Id="AppearanceCommand" />
         <Button Id="MaterialCommand" />
         <Separator />
@@ -1105,10 +1148,30 @@
     </Panel>
 
 
+    <!-- ************************************** -->
+    <!-- ** 2DPCB Create Panel (Design::PCB) ** -->
+    <!-- ************************************** -->
+    <Panel
+      Id="PCBCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
+      <Controls>
+        <Button Id="FusionCreateNewComponentCommand" />
+        <Button Id="PCBCreateCmd" />
+        <Button Id="PCBDefineBoardCmd" />
+      </Controls>
+      <PanelDropdown>
+        <Button Id="FusionCreateNewComponentCommand" />
+        <Separator />
+        <Button Id="PCBCreateCmd" />
+        <Button Id="PCBDefineBoardCmd" />
+      </PanelDropdown>
+    </Panel>
+
+
     <!-- ******************************** -->
-    <!-- ** Modify Panel (Design::PCB) ** -->
+    <!-- ** 2DPCB Modify Panel (Design::PCB) ** -->
     <!-- ******************************** -->
-    <Panel Id="PCBModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
+    <Panel
+      Id="PCBModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
         <Button Id="PCBImprintCmd" />
         <Button Id="PCBBoardSketchEditCmd" />
@@ -1129,7 +1192,8 @@
     <!-- ******************************** -->
     <!-- ** PCB 3D Panel (Design::PCB) ** -->
     <!-- ******************************** -->
-    <Panel Id="PCB3DCreatePanel" _LCLZId="lclzPCB3DCreate" _LCLZText="Create">
+    <Panel Id="PCB3DCreatePanel"
+      _LCLZId="lclzPCB3DCreate" _LCLZText="Create">
       <Controls>
         <Button Id="PCBSketchCreationCmd" />
         <Button Id="PCBHoleCmd" />
@@ -1144,7 +1208,8 @@
     <!-- ******************************** -->
     <!-- ** PCB 3D Panel (Design::PCB) ** -->
     <!-- ******************************** -->
-    <Panel Id="PCB3DModifyPanel" _LCLZId="lclzPCB3D" _LCLZText="Modify">
+    <Panel Id="PCB3DModifyPanel"
+      _LCLZId="lclzPCB3D" _LCLZText="Modify">
       <Controls>
         <Button Id="PCB3DFlipComponentCmd" />
         <Button Id="PCB3DMoveComponentsCmd" />
@@ -1167,7 +1232,8 @@
     <!-- ******************************** -->
     <!-- ** CONFIGURE Panel (Design::PCB) ** -->
     <!-- ******************************** -->
-    <Panel Id="PCBConfigPanel" _LCLZId="lclzPCBConfigure" _LCLZText="Configure">
+    <Panel Id="PCBConfigPanel"
+      _LCLZId="lclzPCBConfigure" _LCLZText="Configure">
       <Controls>
         <Button Id="PCB3DConfigCmd" />
       </Controls>
@@ -1185,7 +1251,8 @@
     <!-- ******************************************************** -->
     <!-- ** Construction Panel (Common for Design environment) ** -->
     <!-- ******************************************************** -->
-    <Panel Id="ConstructionPanel" _LCLZId="lclzConstruction" _LCLZText="Construct">
+    <Panel
+      Id="ConstructionPanel" _LCLZId="lclzConstruction" _LCLZText="Construct">
       <Controls>
         <Button Id="WorkPlaneOffsetFromPlaneCommand" />
       </Controls>
@@ -1199,7 +1266,8 @@
         <Button Id="WorkPlaneFromPointAndFaceCommand" />
         <Button Id="WorkPlaneAlongPathCommand" />
         <Button Id="WorkPlaneFromPointAndNormalCommand" />
-        <!--<Button Id="ConstructionPlanePointDirection" />-->
+        <!--<Button
+        Id="ConstructionPlanePointDirection" />-->
         <Separator />
         <Button Id="WorkAxisThroughCylinderCommand" />
         <Button Id="WorkAxisNormalToFaceCommand" />
@@ -1224,7 +1292,8 @@
     <!-- ************************************** -->
     <!-- ** Inspect Panel  ** -->
     <!-- ************************************** -->
-    <Panel Id="InspectPanel" _LCLZId="lclzInspect" _LCLZText="Inspect">
+    <Panel Id="InspectPanel"
+      _LCLZId="lclzInspect" _LCLZText="Inspect">
       <Controls>
         <Button Id="MeasureCommand" />
       </Controls>
@@ -1245,8 +1314,8 @@
         <Button Id="FusionComponentConnectionAnalysisCommand" />
         <Button Id="FusionEditComponentConnectionAnalysisCommand" />
         <Separator />
-        <Button Id="FusionViewColorCyclingToggleCmd"/>
-        <Button Id="FacegroupsToggleCmd"/>
+        <Button Id="FusionViewColorCyclingToggleCmd" />
+        <Button Id="FacegroupsToggleCmd" />
       </PanelDropdown>
     </Panel>
 
@@ -1254,7 +1323,9 @@
     <!-- ************************************** -->
     <!-- ** Inspect Panel (Mesh) ** -->
     <!-- ************************************** -->
-    <Panel Id="InspectMeshPanel" _LCLZId="lclzInspectMesh" _LCLZText="Inspect" Environment="MeshEnvironment">
+    <Panel
+      Id="InspectMeshPanel" _LCLZId="lclzInspectMesh" _LCLZText="Inspect"
+      Environment="MeshEnvironment">
       <Controls>
         <Button Id="MeasureCommand" />
       </Controls>
@@ -1264,14 +1335,15 @@
         <Button Id="FusionHalfSectionViewCommand" />
       </PanelDropdown>
     </Panel>
-    <Panel Id="ToolsInspectPanel" _LCLZId="lclzInspect" _LCLZText="Inspect">
+    <Panel
+      Id="ToolsInspectPanel" _LCLZId="lclzInspect" _LCLZText="Inspect">
       <Controls>
         <Button Id="MeasureCommand" />
         <Button Id="InterferenceCheckCommand" />
         <Button Id="FusionDraftAnalysisCommand" />
         <Button Id="FusionAccessibilityAnalysisCommand" />
         <Button Id="FusionHalfSectionViewCommand" />
-        <Button Id="FusionViewColorCyclingToggleCmd"/>
+        <Button Id="FusionViewColorCyclingToggleCmd" />
       </Controls>
       <PanelDropdown>
         <Button Id="MeasureCommand" />
@@ -1290,8 +1362,8 @@
         <Button Id="FusionComponentConnectionAnalysisCommand" />
         <Button Id="FusionEditComponentConnectionAnalysisCommand" />
         <Separator />
-        <Button Id="FusionViewColorCyclingToggleCmd"/>
-        <Button Id="FacegroupsToggleCmd"/>
+        <Button Id="FusionViewColorCyclingToggleCmd" />
+        <Button Id="FacegroupsToggleCmd" />
       </PanelDropdown>
     </Panel>
 
@@ -1299,14 +1371,15 @@
     <!-- ************************************** -->
     <!-- ** Insert Panel (All Environments) ** -->
     <!-- ************************************** -->
-    <Panel Id="InsertPanel" _LCLZId="lclzInsert" _LCLZText="Insert">
+    <Panel Id="InsertPanel"
+      _LCLZId="lclzInsert" _LCLZText="Insert">
       <Controls>
-        <Button Id="FusionFastenersCommand"/>
+        <Button Id="FusionFastenersCommand" />
         <Button Id="FusionAddCanvasCommand" />
       </Controls>
       <PanelDropdown>
         <Button Id="FusionImportCommandFromToolbar" />
-        <Button Id="FusionFastenersCommand"/>
+        <Button Id="FusionFastenersCommand" />
         <Button Id="InsertDialogCommand" />
         <Button Id="PullDeriveCommand" />
         <Separator />
@@ -1321,17 +1394,22 @@
         <Button Id="ParaMeshInsertAlignCommand" />
       </PanelDropdown>
     </Panel>
-    <Panel Id="StopPackagePanel" _LCLZId="lclzStopPackage" _LCLZText="Finish" ContextualFinishId="Package3DStop" AvailableBaseTabs="SolidTab">
+    <Panel
+      Id="StopPackagePanel" _LCLZId="lclzStopPackage" _LCLZText="Finish"
+      ContextualFinishId="Package3DStop" AvailableBaseTabs="SolidTab">
       <Controls>
         <Button Id="Package3DStop" />
       </Controls>
     </Panel>
-    <Panel Id="ReturnLibraryPanel" _LCLZId="lclzReturnLibrary" _LCLZText="Finish" ContextualFinishId="ReturnLibrary" AvailableBaseTabs="SolidTab">
+    <Panel Id="ReturnLibraryPanel"
+      _LCLZId="lclzReturnLibrary" _LCLZText="Finish" ContextualFinishId="ReturnLibrary"
+      AvailableBaseTabs="SolidTab">
       <Controls>
         <Button Id="ReturnLibrary" />
       </Controls>
     </Panel>
-    <Panel Id="PackagePanel" _LCLZId="lclzPackage" _LCLZText="Package">
+    <Panel Id="PackagePanel"
+      _LCLZId="lclzPackage" _LCLZText="Package">
       <Controls>
         <Button Id="PackageInsertCommand" />
         <Button Id="PackageFlipCommand" />
@@ -1343,7 +1421,8 @@
         <Button Id="PackageMoveCommand" />
       </PanelDropdown>
     </Panel>
-    <Panel Id="Package3DPanel" _LCLZId="lclzPackage3D" _LCLZText="Package">
+    <Panel
+      Id="Package3DPanel" _LCLZId="lclzPackage3D" _LCLZText="Package">
       <Controls>
         <Button Id="FusionMoveCommand" />
         <Button Id="MeasureCommand" />
@@ -1356,7 +1435,8 @@
     <!-- ************************* -->
     <!-- ** Make Panel ** -->
     <!-- ************************* -->
-    <Panel Id="MakePanel" _LCLZId="lclzMake" _LCLZText="Make">
+    <Panel Id="MakePanel"
+      _LCLZId="lclzMake" _LCLZText="Make">
       <Controls>
         <Button Id="ThreeDprintCmdDef" />
       </Controls>
@@ -1369,7 +1449,8 @@
     <!-- ************************************** -->
     <!-- ** Scripts & Add-ins Panel ** -->
     <!-- ************************************** -->
-    <Panel Id="SolidScriptsAddinsPanel" _LCLZId="lclzScriptsAddins" _LCLZText="Add-ins">
+    <Panel
+      Id="SolidScriptsAddinsPanel" _LCLZId="lclzScriptsAddins" _LCLZText="Add-ins">
       <Controls>
         <Button Id="ScriptsManagerCommand" />
       </Controls>
@@ -1384,7 +1465,8 @@
     <!-- ** Utility Panel ** -->
     <!-- ** Items that does not affect the geometry  ** -->
     <!-- ********************************************** -->
-    <Panel Id="UtilityPanel" _LCLZId="lclzUtility" _LCLZText="Utility">
+    <Panel
+      Id="UtilityPanel" _LCLZId="lclzUtility" _LCLZText="Utility">
       <Controls>
         <Button Id="FusionComputeAllCommand" />
         <Button Id="MaterialCommand" />
@@ -1399,7 +1481,8 @@
     <!-- ************************************* -->
     <!-- ** Select Panel (All Environments) ** -->
     <!-- ************************************* -->
-    <Panel Id="SelectPanel" _LCLZId="lclzSelect" _LCLZText="Select">
+    <Panel
+      Id="SelectPanel" _LCLZId="lclzSelect" _LCLZText="Select">
       <Controls>
         <Button Id="SelectCommand" />
       </Controls>
@@ -1414,11 +1497,11 @@
           <Button Id="SelectByNameCommand" />
           <Button Id="SelectByBoundaryCommand" />
           <Button Id="FusionSelectBodiesBySizeCommand" />
-          <Button Id="SelectByInvertCommand"/>
+          <Button Id="SelectByInvertCommand" />
           <Button Id="FusionSelectSeedAndBoundaryFacesCommand" />
         </DropDownButton>
         <Separator />
-        <Button Id="FusionDragCompControlsCmd" Checkable="true"/>
+        <Button Id="FusionDragCompControlsCmd" Checkable="true" />
         <Separator />
         <DropDownButton _LCLZId="lclzSelectionPriorityCommands" _LCLZText="Selection Priority">
           <Button Id="SelectBodyPriorityCommand" />
@@ -1434,7 +1517,8 @@
     <!-- ************************************* -->
     <!-- ** Select Panel (Mesh) ** -->
     <!-- ************************************* -->
-    <Panel Id="MeshSelectPanel" _LCLZId="lclzMeshSelect" _LCLZText="Select" Environment="MeshEnvironment">
+    <Panel
+      Id="MeshSelectPanel" _LCLZId="lclzMeshSelect" _LCLZText="Select" Environment="MeshEnvironment">
       <Controls>
         <Button Id="SelectCommand" />
       </Controls>
@@ -1443,11 +1527,12 @@
         <Separator />
         <Button Id="selectWindow" />
         <Button Id="selectFreeForm" />
-        <!--<Button Id="selectPolygon" />-->
+        <!--<Button
+        Id="selectPolygon" />-->
         <Button Id="selectPaint" />
         <Separator />
         <Separator />
-        <Button Id="FusionShowSelectionPanelCmd" Checkable="true"/>
+        <Button Id="FusionShowSelectionPanelCmd" Checkable="true" />
         <Separator />
         <DropDownButton Id="SelectionFilterCommand" CheckBoxList="true" />
       </PanelDropdown>
@@ -1457,28 +1542,37 @@
     <!-- ****************************************** -->
     <!-- ** Stop Sketch Panel (All Environments) ** -->
     <!-- ****************************************** -->
-    <Panel Id="StopSketchPanel" _LCLZId="lclzStopSketchTT" _LCLZText="Finish Sketch" ContextualFinishId="SketchStop">
+    <Panel
+      Id="StopSketchPanel" _LCLZId="lclzStopSketchTT" _LCLZText="Finish Sketch"
+      ContextualFinishId="SketchStop">
       <Controls>
         <Button Id="SketchStop" />
       </Controls>
     </Panel>
-    <Panel Id="StopBaseFeaturePanel" _LCLZId="lclzStopBaseFeature" _LCLZText="Finish Base Feature" ContextualFinishId="BaseFeatureStop" AvailableBaseTabs="{none}">
+    <Panel Id="StopBaseFeaturePanel"
+      _LCLZId="lclzStopBaseFeature" _LCLZText="Finish Base Feature"
+      ContextualFinishId="BaseFeatureStop" AvailableBaseTabs="{none}">
       <Controls>
         <Button Id="BaseFeatureStop" />
       </Controls>
     </Panel>
-    <Panel Id="StopTSplineBaseFeaturePanel" _LCLZId="lclzStopTSplineBaseFeature" _LCLZText="Finish Form" ContextualFinishId="TSplineBaseFeatureStop" AvailableBaseTabs="{none}">
+    <Panel
+      Id="StopTSplineBaseFeaturePanel" _LCLZId="lclzStopTSplineBaseFeature" _LCLZText="Finish Form"
+      ContextualFinishId="TSplineBaseFeatureStop" AvailableBaseTabs="{none}">
       <Controls>
         <Button Id="TSplineBaseFeatureStop" />
       </Controls>
     </Panel>
-    <Panel Id="SnapshotPanel" _LCLZId="lclzSnapshot" _LCLZText="Position">
+    <Panel Id="SnapshotPanel"
+      _LCLZId="lclzSnapshot" _LCLZText="Position">
       <Controls>
         <Button Id="SnapshotCmd" />
         <Button Id="AsBuiltPositionsCmd" />
       </Controls>
     </Panel>
-    <Panel Id="FinishSnapshotEditPanel" _LCLZId="lclzFinishSnapshotEdit" _LCLZText="Finish Position" ContextualFinishId="SnapshotEditAccept" AvailableBaseTabs="{none}">
+    <Panel
+      Id="FinishSnapshotEditPanel" _LCLZId="lclzFinishSnapshotEdit" _LCLZText="Finish Position"
+      ContextualFinishId="SnapshotEditAccept" AvailableBaseTabs="{none}">
       <Controls>
         <Button Id="SnapshotEditAccept" />
       </Controls>
@@ -1487,7 +1581,8 @@
         <Button Id="SnapshotEditCancel" />
       </PanelDropdown>
     </Panel>
-    <Panel Id="SnapshotSolidModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
+    <Panel
+      Id="SnapshotSolidModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
         <Button Id="FusionMoveCommand" />
       </Controls>
@@ -1517,12 +1612,15 @@
         <Button Id="TSpline2BRepCommand" />
       </PanelDropdown>
     </Panel>
-    <Panel Id="SheetmetalRefoldPanel" _LCLZId="lclzSheetMetalRefold" _LCLZText="Refold Faces">
+    <Panel
+      Id="SheetmetalRefoldPanel" _LCLZId="lclzSheetMetalRefold" _LCLZText="Refold Faces">
       <Controls>
         <Button Id="FusionSheetmetalRefoldCommand" />
       </Controls>
     </Panel>
-    <Panel Id="StopPCBPanel" _LCLZId="lclzStopPCB" _LCLZText="Finish PCB" ContextualFinishId="PCBStop" AvailableBaseTabs="{none}">
+    <Panel
+      Id="StopPCBPanel" _LCLZId="lclzStopPCB" _LCLZText="Finish PCB" ContextualFinishId="PCBStop"
+      AvailableBaseTabs="{none}">
       <Controls>
         <Button Id="PCBStop" />
       </Controls>
@@ -1532,8 +1630,13 @@
     <!-- ****************** -->
     <!-- ** Return Panel ** -->
     <!-- ****************** -->
-    <!--The Return panel should be visible in all environments except for SheetMetalEnvironment & WorkingModelEnvironment & GenWorkingModelEnvironment. These enviroments have own definition of Return panel -->
-    <Panel Id="ReturnPanel" _LCLZId="lclzReturn" _LCLZText="Return" Environment="3DPrintEnvironment;CAMEnvironment;CAMModelingEnvironment;FusionAssembleEnvironment;FusionDocumentationEnvironment;FusionModelingEnvironment;FusionRenderEnvironment;FusionSolidEnvironment;FusionSurfaceEnvironment;FusionVisualizationEnvironment;MeshEnvironment;PCBEnvironment;Publisher3DEnvironment;SimCompareEnvironment;SimulationEnvironment;TSplineEnvironment;Package3DEnvironment">
+    <!--The
+    Return panel should be visible in all environments except for SheetMetalEnvironment &
+    WorkingModelEnvironment & GenWorkingModelEnvironment. These enviroments have own definition of
+    Return panel -->
+    <Panel Id="ReturnPanel"
+      _LCLZId="lclzReturn" _LCLZText="Return"
+      Environment="3DPrintEnvironment;CAMEnvironment;CAMModelingEnvironment;FusionAssembleEnvironment;FusionDocumentationEnvironment;FusionModelingEnvironment;FusionRenderEnvironment;FusionSolidEnvironment;FusionSurfaceEnvironment;FusionVisualizationEnvironment;MeshEnvironment;PCBEnvironment;Publisher3DEnvironment;SimCompareEnvironment;SimulationEnvironment;TSplineEnvironment;Package3DEnvironment">
       <Controls>
         <Button Id="ReturnToEnvironmentCommand" />
         <Button Id="ReturnToExternalAppCmdDefINV" />
@@ -1546,7 +1649,8 @@
     <!-- ************************ -->
     <!-- ** Render Setup Panel ** -->
     <!-- ************************ -->
-    <Panel Id="RenderSetupPanel" _LCLZId="lclzSetup" _LCLZText="Setup">
+    <Panel
+      Id="RenderSetupPanel" _LCLZId="lclzSetup" _LCLZText="Setup">
       <Controls>
         <Button Id="AppearanceCommand" />
         <Button Id="RenderingEnvCmd" />
@@ -1554,7 +1658,7 @@
         <Button Id="TextureMappingCommand" />
       </Controls>
       <PanelDropdown>
-        <Button Id="PhysicalMaterialCommand"/>
+        <Button Id="PhysicalMaterialCommand" />
         <Button Id="AppearanceCommand" />
         <Button Id="RenderingEnvCmd" />
         <Button Id="FusionAddEditDecalCommand" />
@@ -1566,7 +1670,8 @@
     <!-- *********************************** -->
     <!-- ** Render In-canvas Render Panel ** -->
     <!-- *********************************** -->
-    <Panel Id="InCanvasRenderPanel" _LCLZId="lclzInCanvasRender" _LCLZText="In-canvas Render">
+    <Panel
+      Id="InCanvasRenderPanel" _LCLZId="lclzInCanvasRender" _LCLZText="In-canvas Render">
       <Controls>
         <Button Id="InCanvasRenderCommand" />
         <Button Id="InCanvasRenderSettingsCommand" />
@@ -1583,7 +1688,8 @@
     <!-- ************************* -->
     <!-- ** Render Render Panel ** -->
     <!-- ************************* -->
-    <Panel Id="RenderPanel" _LCLZId="lclzRender" _LCLZText="Render">
+    <Panel Id="RenderPanel"
+      _LCLZId="lclzRender" _LCLZText="Render">
       <Controls>
         <Button Id="A360RenderCommand" />
       </Controls>
@@ -1619,7 +1725,8 @@
     <!-- ************************ -->
     <!-- ** Render Tools Panel ** -->
     <!-- ************************ -->
-    <Panel Id="ToolsPanel" _LCLZId="lclzTools" _LCLZText="Tools">
+    <Panel Id="ToolsPanel"
+      _LCLZId="lclzTools" _LCLZText="Tools">
       <Controls>
         <Button Id="selectWindow" />
       </Controls>
@@ -1632,7 +1739,8 @@
     <!-- ************************ -->
     <!-- **    Assign Panel    ** -->
     <!-- ************************ -->
-    <Panel Id="AssignPanel" _LCLZId="lclzAssign" _LCLZText="Assign">
+    <Panel Id="AssignPanel"
+      _LCLZId="lclzAssign" _LCLZText="Assign">
       <Controls>
         <Button Id="PIMAssignItemNumberCmd" />
       </Controls>
@@ -1645,7 +1753,8 @@
     <!-- ************************ -->
     <!-- **    Release Panel    ** -->
     <!-- ************************ -->
-    <Panel Id="ReleasePanel" _LCLZId="lclzRelease" _LCLZText="Release">
+    <Panel
+      Id="ReleasePanel" _LCLZId="lclzRelease" _LCLZText="Release">
       <Controls>
         <Button Id="PIMQuickReleaseCmd" />
         <Button Id="PIMECOReleaseCmd" />
@@ -1659,7 +1768,8 @@
     <!-- ************************ -->
     <!-- **    Materialized Bom Panel   ** -->
     <!-- ************************ -->
-    <Panel Id="BomPanel" _LCLZId="lclzBom" _LCLZText="BOM">
+    <Panel Id="BomPanel"
+      _LCLZId="lclzBom" _LCLZText="BOM">
       <Controls>
         <Button Id="MaterializedBomCmd" />
       </Controls>
@@ -1672,7 +1782,8 @@
     <!-- ************************ -->
     <!-- **    Manage Panel   ** -->
     <!-- ************************ -->
-    <Panel Id="ManagePanel" _LCLZId="lclzManage" _LCLZText="Process Management">
+    <Panel Id="ManagePanel"
+      _LCLZId="lclzManage" _LCLZText="Process Management">
       <Controls>
         <Button Id="PIMGoToDashboardCmd" />
         <Button Id="PIMGoToItemDetailsCmd" />
@@ -1689,7 +1800,7 @@
     <Button Id="PLM360DeepRefreshDocumentCommand" />
     <Button Id="GetLatestElectronCmd" />
     <Button Id="GetLatestPcbCmd" />
-    <Button Id="GetLatestSchCmd"/>
+    <Button Id="GetLatestSchCmd" />
   </Toolbar>
 
 
@@ -1697,15 +1808,15 @@
   <!-- EIP Toolbar        -->
   <!-- *******************-->
   <Toolbar Id="EIPToolbar" Style="ToolbarSmallStyle">
-    <Label Id="EIPReason" TextFormat="1" ReadOnly="true"/>
+    <Label Id="EIPReason" TextFormat="1" ReadOnly="true" />
     <DropDownButton Id="EIPAssociativityDropDownId" TextFormat="1">
       <RadioButton Id="EIPNonAssociativeToggleCmd" />
       <RadioButton Id="EIPAssociativeToggleCmd" />
       <Separator />
-      <Button Id="ReferenceObjectsCmd"/>
+      <Button Id="ReferenceObjectsCmd" />
     </DropDownButton>
-    <Label Id="EIPObjectName" TextFormat="1" ReadOnly="true"/>
-    <Button Id="EndEditInPlaceCmd"/>
+    <Label Id="EIPObjectName" TextFormat="1" ReadOnly="true" />
+    <Button Id="EndEditInPlaceCmd" />
   </Toolbar>
 
 
@@ -1713,8 +1824,8 @@
   <!-- Config Toolbar        -->
   <!-- *******************-->
   <Toolbar Id="ConfigToolbar" Style="ToolbarSmallStyle">
-    <Label Id="ConfigObjectName" TextFormat="1" ReadOnly="true"/>
-    <Button Id="DesignConfigurationToolbarCmd"/>
+    <Label Id="ConfigObjectName" TextFormat="1" ReadOnly="true" />
+    <Button Id="DesignConfigurationToolbarCmd" />
   </Toolbar>
 
 </Toolbars>
