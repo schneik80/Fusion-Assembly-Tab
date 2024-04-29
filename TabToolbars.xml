@@ -610,6 +610,7 @@
         <Button Id="FusionPartingLineSplitCmd" />
         <Separator />
         <Button Id="FusionMoveCommand" />
+        <Button Id="AlignCmd" />
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
