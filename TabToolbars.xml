@@ -288,7 +288,6 @@
     </Panel>
 
     <!-- ********************************** -->
-
     <!-- ** Setup Panel (Design::Plastic Parts) ** -->
     <!-- ********************************** -->
     <Panel Id="PlasticPartsSetupPanel" _LCLZId="lclzSetup" _LCLZText="Setup">
@@ -299,7 +298,6 @@
     </Panel>
 
     <!-- ********************************** -->
-
     <!-- ** Create Panel (Design::Plastic Parts) ** -->
     <!-- ********************************** -->
     <Panel Id="PlasticPartsCreatePanel" _LCLZId="lclzCreate" _LCLZText="Create">
