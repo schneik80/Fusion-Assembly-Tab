@@ -26,11 +26,11 @@
 
 ## How to install  with script
 
-Fownload the tabtoolbar folder and place in your fusion scripts folder.
+Download the tabtoolbar folder and place in your fusion scripts folder.
 
-Launch Fusion and open the Scripts and Add-ins manager. Button is on the Utilities tab of a design document.
+Launch Fusion and open the Scripts and Add-ins manager on the Utilities tab of a design document.
 
-Run the TabToolbar script and follow prompts.
+Run the "TabToolbar" script and follow prompts.
 
 
 ## Hown to install manualy
