@@ -24,7 +24,16 @@
 
 ![Assembly  tab preview](./assets/asm-tab.png)
 
-## How to install  
+## How to install  with script
+
+Fownload the tabtoolbar folder and place in your fusion scripts folder.
+
+Launch Fusion and open the Scripts and Add-ins manager. Button is on the Utilities tab of a design document.
+
+Run the TabToolbar script and follow prompts.
+
+
+## Hown to install manualy
 
 **!!! Backup your original TabToolbar.xml before using this new toolbar definition xml !!!**
 
