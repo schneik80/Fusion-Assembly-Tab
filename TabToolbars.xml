@@ -1375,7 +1375,6 @@
     <Panel Id="InsertPanel"
       _LCLZId="lclzInsert" _LCLZText="Insert">
       <Controls>
-        <Button Id="FusionFastenersCommand" />
         <Button Id="FusionAddCanvasCommand" />
       </Controls>
       <PanelDropdown>
@@ -1402,12 +1401,13 @@
     <!-- ************************************** -->
     <Panel
       Id="InsertAltPanel"
-      _LCLZId="lclzInsert" _LCLZText="Insert">
+      _LCLZId="lclzAltInsert" _LCLZText="Insert">
       <Controls>
         <Button Id="FusionAddCanvasCommand" />
+        <Button Id="InsertDialogCommand" />
       </Controls>
       <PanelDropdown>
-        <Button Id="FusionImportCommandFromToolbar" />
+        <Button Id="InsertDialogCommand" />
         <Button Id="PullDeriveCommand" />
         <Separator />
         <Button Id="FusionAddEditDecalCommand" />
