@@ -18,11 +18,11 @@
       Environment="FusionSolidEnvironment" />
     <Tab Id="SolidTab" _LCLZId="lclzSolidTab"
       _LCLZText="SOLID"
-      Panels="SolidCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+      Panels="SolidCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertAltPanel;SelectPanel;SnapshotPanel;"
       Environment="FusionSolidEnvironment" />
     <Tab Id="SurfaceTab" _LCLZId="lclzSurfaceTab"
       _LCLZText="SURFACE"
-      Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SnapshotPanel"
+      Panels="SurfaceCreatePanel;SurfaceModifyPanel;SolidUtilityPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertAltPanel;SelectPanel;SnapshotPanel"
       Environment="FusionSolidEnvironment" TabEnvironment="FusionSurfaceEnvironment" />
 
 
@@ -32,16 +32,16 @@
     <!-- ********************************************** -->
     <Tab
       Id="FormTab" _LCLZId="lclzFormTab" _LCLZText="FORM"
-      Panels="TSplinePrimitivePanel;TSplineModifyPanel;TSplineSymmetryPanel;TSplineUtilitiesPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopTSplineBaseFeaturePanel"
+      Panels="TSplinePrimitivePanel;TSplineModifyPanel;TSplineSymmetryPanel;TSplineUtilitiesPanel;ConstructionPanel;InspectPanel;InsertAltPanel;SelectPanel;StopTSplineBaseFeaturePanel"
       Environment="FusionSolidEnvironment" ContextualFinishId="TSplineBaseFeatureStop"
       TabEnvironment="TSplineEnvironment" />
     <Tab Id="SheetMetalTab" _LCLZId="lclzSheetMetalTab"
       _LCLZText="SHEET METAL"
-      Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel"
+      Panels="SheetMetalCreatePanel;SheetMetalModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertAltPanel;SelectPanel;SheetmetalRefoldPanel;SnapshotPanel"
       Environment="FusionSolidEnvironment" TabEnvironment="FusionSheetMetalEnvironment" />
     <Tab
       Id="PlasticTab" _LCLZId="lclzPlasticPartsTab" _LCLZText="PLASTIC"
-      Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertPanel;SelectPanel;SnapshotPanel;"
+      Panels="PlasticPartsSetupPanel;PlasticPartsCreatePanel;SolidModifyPanel;ConfigurePanel;ConstructionPanel;PlasticPartsInspectPanel;InsertAltPanel;SelectPanel;SnapshotPanel;"
       Environment="FusionSolidEnvironment" />
     <Tab Id="PCBsTab" _LCLZId="lclzPCBPartsTab"
       _LCLZText="PCB"
@@ -62,7 +62,7 @@
     <!-- ContextID specifies the button that activates it. -->
     <!-- ************************************************* -->
     <Tab Id="PCBTab" _LCLZId="lclzPCBTab" _LCLZText="PCB"
-      Panels="PCBCreatePanel;PCBModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopPCBPanel"
+      Panels="PCBCreatePanel;PCBModifyPanel;ConstructionPanel;InspectPanel;InsertAltPanel;SelectPanel;StopPCBPanel"
       Environment="FusionSolidEnvironment" ContextualFinishId="PCBStop" />
     <Tab Id="PCB3DTab"
       _LCLZId="lclzPCB3DTab" _LCLZText="3D PCB"
@@ -78,16 +78,16 @@
       ContextualFinishId="ReturnLibrary" Environment="ElectronPackageEnvironment" />
     <Tab
       Id="BasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID"
-      Panels="SolidCreatePanel;SolidModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel"
+      Panels="SolidCreatePanel;SolidModifyPanel;ConstructionPanel;InspectPanel;InsertAltPanel;SelectPanel;StopBaseFeaturePanel"
       Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
     <Tab
       Id="BasefeatureSurfaceTab" _LCLZId="lclzBaseFeatureSurfaceTab"
       _LCLZText="BASE FEATURE SURFACE"
-      Panels="SurfaceCreatePanel;SurfaceModifyPanel;ConstructionPanel;InspectPanel;InsertPanel;SelectPanel;StopBaseFeaturePanel"
+      Panels="SurfaceCreatePanel;SurfaceModifyPanel;ConstructionPanel;InspectPanel;InsertAltPanel;SelectPanel;StopBaseFeaturePanel"
       Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
     <Tab
       Id="SketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH"
-      Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel"
+      Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertAltPanel;SelectPanel;StopSketchPanel"
       Environment="FusionSolidEnvironment" ContextualFinishId="SketchStop" />
     <Tab
       Id="EditSnapshotTab" _LCLZId="lclzSnapshotTab" _LCLZText="POSITION"
@@ -95,7 +95,7 @@
       Environment="FusionSolidEnvironment" ContextualFinishId="SnapshotEditAccept" />
     <Tab
       Id="PCBSketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH"
-      Panels="PCB3DSketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;InspectPanel;InsertPanel;SelectPanel;StopSketchPanel"
+      Panels="PCB3DSketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;InspectPanel;InsertAltPanel;SelectPanel;StopSketchPanel"
       Environment="PCB3DEnvironment" ContextualFinishId="SketchStop" />
     <Tab
       Id="PCBBasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID"
@@ -1370,7 +1370,7 @@
 
 
     <!-- ************************************** -->
-    <!-- ** Insert Panel (All Environments) ** -->
+    <!-- ** Insert Panel (Assemblies) ** -->
     <!-- ************************************** -->
     <Panel Id="InsertPanel"
       _LCLZId="lclzInsert" _LCLZText="Insert">
@@ -1392,6 +1392,31 @@
         <Button Id="SketchImportSVG" />
         <Button Id="ImportDxfFileCommand" />
         <Button Id="InsertMcMasterCarrComponentCommand" />
+        <Button Id="ParaMeshInsertAlignCommand" />
+      </PanelDropdown>
+    </Panel>
+  
+
+    <!-- ************************************** -->
+    <!-- ** Insert Panel (Non-Assembly) ** -->
+    <!-- ************************************** -->
+    <Panel
+      Id="InsertAltPanel"
+      _LCLZId="lclzInsert" _LCLZText="Insert">
+      <Controls>
+        <Button Id="FusionAddCanvasCommand" />
+      </Controls>
+      <PanelDropdown>
+        <Button Id="FusionImportCommandFromToolbar" />
+        <Button Id="PullDeriveCommand" />
+        <Separator />
+        <Button Id="FusionAddEditDecalCommand" />
+        <Button Id="FusionAddCanvasCommand" />
+        <Button Id="FusionAddBackgroundCanvasCommand" />
+        <Separator />
+        <Button Id="TSplineImportCommand" />
+        <Button Id="SketchImportSVG" />
+        <Button Id="ImportDxfFileCommand" />
         <Button Id="ParaMeshInsertAlignCommand" />
       </PanelDropdown>
     </Panel>
@@ -1433,6 +1458,8 @@
         <Button Id="MeasureCommand" />
       </PanelDropdown>
     </Panel>
+
+
     <!-- ************************* -->
     <!-- ** Make Panel ** -->
     <!-- ************************* -->
