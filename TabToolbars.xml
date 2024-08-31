@@ -501,6 +501,8 @@
         <Button Id="PrimitiveCoil" />
         <Button Id="PrimitivePipe" />
         <Separator />
+        <Button Id="StockModelCommand" />
+        <Separator />
         <DropDownButton _LCLZId="lclzPattern" _LCLZText="Pattern">
           <Button Id="PatternRectangular" />
           <Button Id="PatternCircular" />
@@ -819,6 +821,8 @@
         <Button Id="FusionComputeAllCommand" />
         <Button Id="FusionComputeUnresolvedCommand" />
         <Button Id="ChangeParameterCommand" />
+        <Separator />
+        <Button Id="FusionFastenerStackAnalysisCommand" />
       </PanelDropdown>
     </Panel>
 
@@ -1267,8 +1271,7 @@
         <Button Id="WorkPlaneFromPointAndFaceCommand" />
         <Button Id="WorkPlaneAlongPathCommand" />
         <Button Id="WorkPlaneFromPointAndNormalCommand" />
-        <!--<Button
-        Id="ConstructionPlanePointDirection" />-->
+        <Button Id="ConstructionPlanePointDirection" />
         <Separator />
         <Button Id="WorkAxisThroughCylinderCommand" />
         <Button Id="WorkAxisNormalToFaceCommand" />
@@ -1317,6 +1320,8 @@
         <Separator />
         <Button Id="FusionViewColorCyclingToggleCmd" />
         <Button Id="FacegroupsToggleCmd" />
+        <Separator />
+        <Button Id="FusionFastenerStackAnalysisCommand"/>
       </PanelDropdown>
     </Panel>
 
@@ -1365,6 +1370,8 @@
         <Separator />
         <Button Id="FusionViewColorCyclingToggleCmd" />
         <Button Id="FacegroupsToggleCmd" />
+        <Separator />
+        <Button Id="FusionFastenerStackAnalysisCommand"/>
       </PanelDropdown>
     </Panel>
 
