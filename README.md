@@ -3,11 +3,11 @@
 ## Overview of Changes  
 
 - Introduce a dedicate Assembly Experience
-  - Add **Assembly** tab to Fusion 360 design documents
+  - Add **Assembly** tab to Fusion design documents
   - New **Assemble** panel in the Assembly tab
-  - Moves all Assembly tools to an Assemble panel.
+    - Moves all Assembly tools to an Assemble panel.
   - New **Motion** panel in the Assembly tab
-  - Move motion tools to Motion panel
+    - Move motion tools to Motion panel
   - Removes **Assemble** panel from other domain specific ( i.e. Sheetmetal, Plastic, others ) Modeling tabs.
     > NOTE: To remove Assemble from the Mesh tab requires an additional xml document to be modified.
   - Moves **As Built Joint** and **Joint Origin** into an **Advanced** sub menu
@@ -19,6 +19,8 @@
   - BOM panel moved to the start of the manage tab tools
 - Remove Automated modeling panel
   - **Automated modeling** now appears in Solid Tab's Create panel menu
+- Insert Panel cleanup
+    -remove asssembly related isnert commands from non-assembly insert panel
 
 ### Screenshot
 
@@ -26,9 +28,9 @@
 
 ## How to install  with script
 
-Download the tabtoolbar folder and place in your fusion scripts folder.
+Download the tabtoolbar folder and place in your Fusion scripts folder.
 
-Launch Fusion and open the Scripts and Add-ins manager on the Utilities tab of a design document.
+Launch Fusion and open the **Scripts and Add-ins manager** on the Utilities tab of a design document.
 
 Run the "TabToolbar" script and follow prompts.
 
@@ -37,7 +39,7 @@ Run the "TabToolbar" script and follow prompts.
 
 **!!! Backup your original TabToolbar.xml before using this new toolbar definition xml !!!**
 
-Download the ()[Tabtoolbar.xml]
+Download the Tabtoolbar.xml from this repo's code section.
 
 On **Mac OS**, over-write the existing file here:
 
@@ -47,11 +49,13 @@ On **Windows**, over-write the existing file here:
 
     \Users\ <Your User Name> \AppData\Local\Autodesk\webdeploy\production\ <Current deployment GUID> \Fusion\UI\FusionUI\Resources\Toolbar\TabToolbars.xml
 
-Relaunch Fusion 360.
+Relaunch Fusion.
 
 ## Uninstall
 
-To uninstall, restore the original file you archived and restart Fusion 360.
+To uninstall, restore the original file you archived and restart Fusion.
+
+----
 
 ## Special instructions for Mesh tab
 
