@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE Toolbars [
+<!DOCTYPE asm Toolbars [
   <!ENTITY DebugPanels SYSTEM "Shared/DebugPanels.xml">
 ]>
 <Toolbars>
@@ -87,7 +87,7 @@
       Environment="FusionSolidEnvironment" ContextualFinishId="BaseFeatureStop" />
     <Tab
       Id="SketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH"
-      Panels="SketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertAltPanel;SelectPanel;StopSketchPanel"
+      Panels="SketchCreatePanel;SketchModifyPanel;AutomatePanelSketch;SketchConstraintsPanel;ConfigurePanel;InspectPanel;InsertAltPanel;SelectPanel;StopSketchPanel"
       Environment="FusionSolidEnvironment" ContextualFinishId="SketchStop" />
     <Tab
       Id="EditSnapshotTab" _LCLZId="lclzSnapshotTab" _LCLZText="POSITION"
@@ -95,7 +95,7 @@
       Environment="FusionSolidEnvironment" ContextualFinishId="SnapshotEditAccept" />
     <Tab
       Id="PCBSketchTab" _LCLZId="lclzSketchTab" _LCLZText="SKETCH"
-      Panels="PCB3DSketchCreatePanel;SketchModifyPanel;SketchConstraintsPanel;InspectPanel;InsertAltPanel;SelectPanel;StopSketchPanel"
+      Panels="PCB3DSketchCreatePanel;SketchModifyPanel;AutomatePanelSketch;SketchConstraintsPanel;InspectPanel;InsertAltPanel;SelectPanel;StopSketchPanel"
       Environment="PCB3DEnvironment" ContextualFinishId="SketchStop" />
     <Tab
       Id="PCBBasefeatureSolidTab" _LCLZId="lclzBaseFeatureSolidTab" _LCLZText="BASE FEATURE SOLID"
@@ -118,10 +118,7 @@
     <!-- **  T A B B E D  P A N E L S  ** -->
     <!-- **                            ** -->
     <!-- ******************************** -->
-    &DebugPanels;
-    
-    
-    <!-- *********************************** -->
+    &DebugPanels; <!-- *********************************** -->
     <!-- ** Create Panel (Design::Sketch) ** -->
     <!-- *********************************** -->
     <Panel Id="SketchCreatePanel" _LCLZId="lclzCREATE" _LCLZText="CREATE">
@@ -311,6 +308,24 @@
         <Button Id="FusionMoveCommand" />
         <Separator />
         <Button Id="ChangeParameterCommand" />
+      </PanelDropdown>
+    </Panel>
+
+
+    <!-- *********************************** -->
+    <!-- ** Modify Panel (Design::Sketch) ** -->
+    <!-- *********************************** -->
+    <Panel
+      Id="AutomatePanelSketch" _LCLZId="lclzAutomatePanelSketch" _LCLZText="AUTOMATE">
+      <Controls>
+        <Button Id="SketchAutoConstraintAndDimCmd" />
+        <Button Id="QuickSketchAutoConstraintCommand" />
+        <Button Id="ADEAutoArrangeDimensionCmd" />
+      </Controls>
+      <PanelDropdown>
+        <Button Id="SketchAutoConstraintAndDimCmd" />
+        <Button Id="QuickSketchAutoConstraintCommand" />
+        <Button Id="ADEAutoArrangeDimensionCmd" />
       </PanelDropdown>
     </Panel>
 
@@ -1321,7 +1336,7 @@
         <Button Id="FusionViewColorCyclingToggleCmd" />
         <Button Id="FacegroupsToggleCmd" />
         <Separator />
-        <Button Id="FusionFastenerStackAnalysisCommand"/>
+        <Button Id="FusionFastenerStackAnalysisCommand" />
       </PanelDropdown>
     </Panel>
 
@@ -1371,7 +1386,7 @@
         <Button Id="FusionViewColorCyclingToggleCmd" />
         <Button Id="FacegroupsToggleCmd" />
         <Separator />
-        <Button Id="FusionFastenerStackAnalysisCommand"/>
+        <Button Id="FusionFastenerStackAnalysisCommand" />
       </PanelDropdown>
     </Panel>
 
@@ -1379,7 +1394,8 @@
     <!-- ************************************** -->
     <!-- ** Insert Panel (Assemblies) ** -->
     <!-- ************************************** -->
-    <Panel Id="InsertPanel"
+    <Panel
+      Id="InsertPanel"
       _LCLZId="lclzInsert" _LCLZText="Insert">
       <Controls>
         <Button Id="FusionAddCanvasCommand" />
@@ -1401,7 +1417,7 @@
         <Button Id="ParaMeshInsertAlignCommand" />
       </PanelDropdown>
     </Panel>
-  
+
 
     <!-- ************************************** -->
     <!-- ** Insert Panel (Non-Assembly) ** -->
