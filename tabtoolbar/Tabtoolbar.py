@@ -1,57 +1,45 @@
-# Author-Kevin Schneider
-# Description-Install Assembly tab into Fusion design toolbar
-
 import adsk.core, adsk.fusion, adsk.cam, os, sys, traceback, pathlib, zipfile, json
 import urllib.request
 from sys import platform
 
+# import adsk.cam
+
+# Initialize the global variables for the Application and UserInterface objects.
 app = adsk.core.Application.get()
 ui = app.userInterface
-run = False  # track if the user clicks yes or no
 url = "https://raw.githubusercontent.com/schneik80/Fusion-Assembly-Tab/main/TabToolbars.xml"  # URL to the main branch in GITHUB for the new tabtoolbar.xml
-
-# Prompt user to run or exit
-ui.messageBox(
-    "Click YES, to install a new Design Document Toolbar with a dedicated Assembly Tab?\n\nA backup of your existing toolbar xml will be created automatically. ",
-    "Install Assembly Tab",
-    3,
-    1,
-)
-
-# If we get here the user picked yes
-run = True
 
 
 def run(context):
-    ui = None
+
+    # Prompt user to run or exit
+    ui.messageBox(
+        "Click YES, to install a new Design Document Toolbar with a dedicated Assembly Tab?\n\nA backup of your existing toolbar xml will be created automatically. ",
+        "Install Assembly Tab",
+        3,
+        1,
+    )
 
     # Detect the OS platform so we can get the correct path to the tabtoolbar.xml
     try:
         # Windows
         if platform == "win32":
             winassytb()
-            return
 
         # Mac OS
         elif platform == "darwin":
             macassytb()
-            return
 
-    except:
-        if ui:
-            ui.messageBox("Failed:\n{}".format(traceback.format_exc()))
-
-
-def close():
-    if run == True:
         ui.messageBox(
             "New Design toolbar with Assembly Tab is installed. Please save and close or close all open documents then restart Fusion",
             "Install Assembly Tab",
             0,
             2,
         )
-    else:
-        exit
+
+    except:
+        if ui:
+            ui.messageBox("Failed:\n{}".format(traceback.format_exc()))
 
 
 # Windows
@@ -62,7 +50,8 @@ def winassytb():
 
         # set the path to the tabtoolbar.xml
         tb_path = os.path.join(
-            code_path.parent,
+            code_path,
+            "Fusion",
             "Fusion",
             "UI",
             "FusionUI",
@@ -73,7 +62,8 @@ def winassytb():
 
         # set the path for the tabtoolbar.zip arrchive
         tb_zip = os.path.join(
-            code_path.parent,
+            code_path,
+            "Fusion",
             "Fusion",
             "UI",
             "FusionUI",
@@ -140,8 +130,6 @@ def macassytb():
             url,
             tb_path,
         )
-
-        close()
 
     except:
         if ui:

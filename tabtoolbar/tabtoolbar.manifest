@@ -1,10 +1,11 @@
 {
 	"autodeskProduct":	"Fusion",
 	"type":	"script",
-	"author":	"Kevin Schneider",
+	"author":	"schneik",
 	"description":	{
-		"":	"Install Assembly tab into Fusion design toolbar"
+		"":	"Install new Toolbars"
 	},
 	"supportedOS":	"windows|mac",
-	"editEnabled":	false
+	"editEnabled":	true,
+	"iconFilename":	"ScriptIcon.svg"
 }
