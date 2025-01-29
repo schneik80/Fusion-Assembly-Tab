@@ -103,9 +103,10 @@
       ContextualFinishId="BaseFeatureStop" />
 
 
-    <!-- ***** -->
+    <!-- ****** -->
     <!-- Extras -->
-    <!-- ***** -->
+    <!-- ****** -->
+
     <Tab Id="RenderTab" _LCLZId="lclzRenderTab"
       _LCLZText="RENDER" Panels="RenderSetupPanel;InCanvasRenderPanel;RenderPanel"
       Environment="FusionRenderEnvironment" />
@@ -517,6 +518,7 @@
         <Button Id="PrimitivePipe" />
         <Separator />
         <Button Id="StockModelCommand" />
+        <Button Id="ArrangeCommand" />
         <Separator />
         <DropDownButton _LCLZId="lclzPattern" _LCLZText="Pattern">
           <Button Id="PatternRectangular" />
@@ -578,7 +580,6 @@
         <Button Id="FusionDeleteCommand" />
         <Button Id="SoftDeleteCommand" />
         <Separator />
-        <Button Id="ArrangeCommand" />
         <DropDownButton _LCLZId="lclzSimplify" _LCLZText="Simplify">
           <Button Id="FusionRemoveFeaturesCommand" />
           <Button Id="FusionRemoveFacesCommand" />
@@ -1187,9 +1188,9 @@
     </Panel>
 
 
-    <!-- ******************************** -->
+    <!-- ************************************** -->
     <!-- ** 2DPCB Modify Panel (Design::PCB) ** -->
-    <!-- ******************************** -->
+    <!-- ************************************** -->
     <Panel
       Id="PCBModifyPanel" _LCLZId="lclzModify" _LCLZText="Modify">
       <Controls>
@@ -1249,9 +1250,9 @@
     </Panel>
 
 
-    <!-- ******************************** -->
+    <!-- *********************************** -->
     <!-- ** CONFIGURE Panel (Design::PCB) ** -->
-    <!-- ******************************** -->
+    <!-- *********************************** -->
     <Panel Id="PCBConfigPanel"
       _LCLZId="lclzPCBConfigure" _LCLZText="Configure">
       <Controls>
@@ -1268,6 +1269,8 @@
     <!-- **  C O M M O N  P A N E L S  ** -->
     <!-- **                            ** -->
     <!-- ******************************** -->
+
+
     <!-- ******************************************************** -->
     <!-- ** Construction Panel (Common for Design environment) ** -->
     <!-- ******************************************************** -->
@@ -1683,8 +1686,8 @@
     <!-- ****************** -->
     <!--The
     Return panel should be visible in all environments except for SheetMetalEnvironment &
-    WorkingModelEnvironment & GenWorkingModelEnvironment. These enviroments have own definition of
-    Return panel -->
+    WorkingModelEnvironment & GenWorkingModelEnvironment. These environments have own definition
+    of Return panel -->
     <Panel Id="ReturnPanel"
       _LCLZId="lclzReturn" _LCLZText="Return"
       Environment="3DPrintEnvironment;CAMEnvironment;CAMModelingEnvironment;FusionAssembleEnvironment;FusionDocumentationEnvironment;FusionModelingEnvironment;FusionRenderEnvironment;FusionSolidEnvironment;FusionSurfaceEnvironment;FusionVisualizationEnvironment;MeshEnvironment;PCBEnvironment;Publisher3DEnvironment;SimCompareEnvironment;SimulationEnvironment;TSplineEnvironment;Package3DEnvironment">
@@ -1750,9 +1753,9 @@
     </Panel>
 
 
-    <!-- ****************** -->
+    <!-- ***************** -->
     <!-- ** AddIn Panel ** -->
-    <!-- ****************** -->
+    <!-- ***************** -->
     <!-- <Panel Id="AddInPanel" _LCLZId="lclzAddIn" _LCLZText="Add-Ins">
       <Controls>
         <Button Id="FusionCFDModelAssessmentToolCommand" />
@@ -1801,9 +1804,9 @@
     </Panel>
 
 
-    <!-- ************************ -->
+    <!-- ************************* -->
     <!-- **    Release Panel    ** -->
-    <!-- ************************ -->
+    <!-- ************************* -->
     <Panel
       Id="ReleasePanel" _LCLZId="lclzRelease" _LCLZText="Release">
       <Controls>
@@ -1816,9 +1819,9 @@
       </PanelDropdown>
     </Panel>
 
-    <!-- ************************ -->
+    <!-- ********************************* -->
     <!-- **    Materialized Bom Panel   ** -->
-    <!-- ************************ -->
+    <!-- ********************************* -->
     <Panel Id="BomPanel"
       _LCLZId="lclzBom" _LCLZText="BOM">
       <Controls>
@@ -1830,9 +1833,9 @@
     </Panel>
 
 
-    <!-- ************************ -->
+    <!-- *********************** -->
     <!-- **    Manage Panel   ** -->
-    <!-- ************************ -->
+    <!-- *********************** -->
     <Panel Id="ManagePanel"
       _LCLZId="lclzManage" _LCLZText="Process Management">
       <Controls>
@@ -1872,7 +1875,7 @@
 
 
   <!-- *******************-->
-  <!-- Config Toolbar        -->
+  <!-- Config Toolbar     -->
   <!-- *******************-->
   <Toolbar Id="ConfigToolbar" Style="ToolbarSmallStyle">
     <Label Id="ConfigObjectName" TextFormat="1" ReadOnly="true" />
