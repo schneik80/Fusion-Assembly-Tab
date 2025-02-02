@@ -312,10 +312,6 @@
       </PanelDropdown>
     </Panel>
 
-
-    <!-- *********************************** -->
-    <!-- ** Modify Panel (Design::Sketch) ** -->
-    <!-- *********************************** -->
     <Panel
       Id="AutomatePanelSketch" _LCLZId="lclzAutomatePanelSketch" _LCLZText="AUTOMATE">
       <Controls>
