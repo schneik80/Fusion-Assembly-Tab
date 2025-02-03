@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbars>
+    <CommandToolbar Id="FusionAssetType">
+
+        <!-- ********************* -->
+        <!-- ** Persistent Tabs ** -->
+        <!-- ********************* -->
+        <Tab Id="ParaMeshOuterTab" _LCLZId="lclzParaMeshOuterTab" _LCLZText="Mesh" Panels="ParaMeshCreatePanel;ParaMeshPreparePanel;ParaMeshModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertAltPanel;ParaMeshSelectPanel;ParaMeshExportPanel;SnapshotPanel" Environment="FusionSolidEnvironment" TabEnvironment="FusionSolidEnvironment"/>
+
+        <!-- ParaMesh tab for inside the base feature -->
+        <Tab Id="ParaMeshBaseFeatureTab" _LCLZId="lclzParaMeshBaseFeatureTab" _LCLZText="Direct Mesh Editing" Panels="ParaMeshCreateBaseFeature;ParaMeshPreparePanel;ParaMeshModifyPanel;ConstructionPanel;InspectPanel;ParaMeshSelectPanel;ParaMeshExportPanel;ParaMeshBaseFeatureStopPanel" Environment="FusionSolidEnvironment" ContextualFinishId="ParaMeshBaseFeatureStopCommand" TabEnvironment="ParaMeshEnvironment"/>
+
+        <!-- ********************* -->
+        <!-- **  Tabbed Panels  ** -->
+        <!-- ********************* -->
+        <Panel Id="ParaMeshCreatePanel" _LCLZId="lclzParaMeshCreate" _LCLZText="Create" Environment="FusionSolidEnvironment">
+            <Controls>
+                <Button Id="ParaMeshInsertAlignCommand" />
+                <Button Id="ParaMeshTessellateCommand" />
+                <Button Id="ParaMeshPlanarSectionCommand" />
+            </Controls>
+            <PanelDropdown>
+                <Button Id="ParaMeshInsertAlignCommand" />
+                <Button Id="ParaMeshTessellateCommand" />
+                <Separator />
+                <Button Id="ParaMeshPlanarSectionCommand" />
+                <Button Id="ParaMeshEmptyBaseFeatureCommand" />
+            </PanelDropdown>
+        </Panel>
+
+        <Panel Id="ParaMeshCreateBaseFeature" _LCLZId="lclzParaMeshCreate" _LCLZText="Create" Environment="ParaMeshEnvironment">
+            <Controls>
+                <Button Id="ParaMeshInsertAlignCommand" />
+            </Controls>
+        </Panel>
+
+        <Panel Id="ParaMeshPreparePanel" _LCLZId="lclzParaMeshPrepare" _LCLZText="Prepare" Environment="FusionSolidEnvironment;ParaMeshEnvironment">
+            <Controls>
+                <Button Id="ParaMeshRepairCommand" />
+                <Button Id="ParaMeshCalculateFaceGroupsCommand" />
+                <Button Id="ParaMeshMergeFaceGroupsCommand" />
+                <Button Id="ParaMeshCreateFaceGroupCommand" />
+            </Controls>
+        </Panel>
+
+        <Panel Id="ParaMeshModifyPanel" _LCLZId="lclzParaMeshModify" _LCLZText="Modify" Environment="FusionSolidEnvironment;ParaMeshEnvironment">
+            <Controls>
+                <Button Id="ParaMeshRemeshCommand" />
+                <Button Id="ParaMeshReduceCommand" />
+                <Button Id="ParaMeshPlaneCutCommand" />
+                <Button Id="ParaMeshHollowCommand" />
+                <Button Id="ParaMeshCombineCommand" />
+                <Button Id="FusionMoveCommand" />
+                <Button Id="ParaMeshScaleCommand" />
+                <Button Id="ParaMeshBaseFeatureCreateCommand" />
+            </Controls>
+            <PanelDropdown>
+                <Button Id="ParaMeshBaseFeatureCreateCommand" />
+                <Button Id="ParaMeshRemeshCommand" />
+                <Button Id="ParaMeshReduceCommand" />
+                <Button Id="ParaMeshPlaneCutCommand" />
+                <Button Id="ParaMeshHollowCommand" />
+                <Button Id="ParaMeshCombineCommand" />
+                <Button Id="ParaMeshSmoothCommand" />
+                <Button Id="ParaMeshReverseNormalsCommand"/>
+                <Button Id="ParaMeshEraseAndFillCommand"/>
+                <Button Id="ParaMeshAlignCommand"/>
+                <Button Id="ParaMeshTextureCommand" />
+                <Separator />
+                <Button Id="ParaMeshExtractCommand" />
+                <Separator />
+                <Button Id="FusionMoveCommand" />
+                <Button Id="ParaMeshScaleCommand" />
+                <Button Id="FusionDeleteCommand" />
+                <Button Id="ParaMeshRemoveCommand" />
+                <Separator />
+                <Button Id="ParaMeshConvertCommand" />
+                <Button Id="ParaMeshToQuadMeshCommand" />
+                <Separator />
+                <Button Id="PhysicalMaterialCommand"/>
+                <Button Id="AppearanceCommand" />
+                <Button Id="VolFieldCreateLatticeCommand"/>
+                <Separator />
+                <Button Id="ChangeParameterCommand" />
+                <Button Id="FusionComputeAllCommand" />
+            </PanelDropdown>
+        </Panel>
+
+        <Panel Id="ParaMeshSelectPanel" _LCLZId="lclzMeshSelect" _LCLZText="Select" Environment="FusionSolidEnvironment;ParaMeshEnvironment">
+            <Controls>
+                <Button Id="SelectCommand" />
+            </Controls>
+            <PanelDropdown>
+                <Button Id="SelectCommand" />
+                <Separator />
+                <Button Id="selectWindow" />
+                <Button Id="selectFreeForm" />
+                <!--<Button Id="selectPolygon" />-->
+                <Button Id="selectPaint" />
+                <Separator />
+                <Separator />
+                <Button Id="ParaMeshShowSelectionPanelCmd" Checkable="true"/>
+                <Separator />
+                <DropDownButton Id="SelectionFilterCommand" CheckBoxList="true" />
+            </PanelDropdown>
+        </Panel>
+
+        <Panel Id="ParaMeshExportPanel" _LCLZId="lclzParaMeshExport" _LCLZText="Export" Environment="FusionSolidEnvironment;ParaMeshEnvironment">
+            <PanelDropdown>
+                <Button Id="ThreeDprintCmdDef" />
+            </PanelDropdown>
+        </Panel>
+
+        <Panel Id="ParaMeshBaseFeatureStopPanel" _LCLZId="lclzStopMeshBaseFeature" _LCLZText="Finish direct editing" ContextualFinishId="ParaMeshBaseFeatureStopCommand" AvailableBaseTabs="{none}">
+            <Controls>
+                <Button Id="ParaMeshBaseFeatureStopCommand"/>
+            </Controls>
+        </Panel>
+    </CommandToolbar>
+</Toolbars>
