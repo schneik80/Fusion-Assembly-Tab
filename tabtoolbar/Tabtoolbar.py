@@ -22,9 +22,9 @@ ui = app.userInterface
 tbnext = False  # get the current production toolbars
 
 if tbnext == True:
-    gitPrefix = f"https://github.com/schneik80/Fusion-Assembly-Tab/blob/next/"
+    gitPrefix = f"https://raw.githubusercontent.com/schneik80/Fusion-Assembly-Tab/next/"
 else:
-    gitPrefix = f"https://github.com/schneik80/Fusion-Assembly-Tab/blob/main/"
+    gitPrefix = f"https://raw.githubusercontent.com/schneik80/Fusion-Assembly-Tab/main/"
 
 tbURL = f"{gitPrefix}newbars/design/TabToolbars.xml"  # URL to the main branch in GITHUB for the new tabtoolbar.xml
 fpURL = f"{gitPrefix}newbars/flatpattern/TabToolbars.xml"  # URL to the main branch in GITHUB for the new flat pattern tabtoolbar.xml
@@ -70,9 +70,7 @@ def swapXML(OS):
 
         # Mac OS note that the path is different and requires an additional "Fusion" folder
         elif platform == "darwin":
-            code_path = os.path.join(
-                pathlib.Path(PATHS_DICT.get("appDirectory")), "Fusion"
-            )
+            code_path = pathlib.Path(PATHS_DICT.get("appDirectory"))
 
         # Get paths for Design, Mesh, and Flat Pattern tabtoolbar.xml and tabtoolbar.zip
 
@@ -82,17 +80,18 @@ def swapXML(OS):
         tb_path = os.path.join(
             code_path,
             "Fusion",
+            "Fusion",
             "UI",
             "FusionUI",
             "Resources",
             "Toolbar",
             "TabToolbars.xml",
         )
-        app.log(f"toolbar {tb_path}")
 
         # set the path for the Fusion design tabtoolbar.zip archive on windows
         tb_zip = os.path.join(
             code_path,
+            "Fusion",
             "Fusion",
             "UI",
             "FusionUI",
@@ -113,7 +112,6 @@ def swapXML(OS):
             "Toolbar",
             "TabToolbars.xml",
         )
-        app.log(f"mesh toolbar {pmtb_path}")
 
         # set the path for the Fusion mesh tabtoolbar.zip archive on windows
         pmtb_zip = os.path.join(
@@ -132,17 +130,18 @@ def swapXML(OS):
         fptb_path = os.path.join(
             code_path,
             "Fusion",
+            "Fusion",
             "UI",
             "FusionSheetMetalUI",
             "Resources",
             "Toolbar",
             "TabToolbars.xml",
         )
-        app.log(f"flatpattern toolbar {fptb_path}")
 
         # set the path for the Fusion flatpattern tabtoolbar.zip archive on windows
         fptb_zip = os.path.join(
             code_path,
+            "Fusion",
             "Fusion",
             "UI",
             "FusionSheetMetalUI",
@@ -151,28 +150,23 @@ def swapXML(OS):
             "TabToolbars.zip",
         )
 
-        # Get the tabtoolbar.xml from the URL
-        urllib.request.urlretrieve(
-            tbURL,
-            tb_path,
-        )
-
-        pathsWinDict = {
+        pathsDict = {
             "Design": [tb_path, tb_zip, tbURL],
             "Mesh": [pmtb_path, pmtb_zip, pmURL],
             "Flatpattern": [fptb_path, fptb_zip, fpURL],
         }
 
         # Check if the tabtoolbar.xml is there and zip it. This overwrites any existing zip.
-        for key, value in pathsWinDict.items():
+        for key, value in pathsDict.items():
             if os.path.exists(value[0]):
                 zipfile.ZipFile(value[1], mode="w").write(value[0])
                 app.log("Backup of {} tabtoolbar.xml created".format(key))
                 urllib.request.urlretrieve(
-                    value[3],
+                    value[2],
                     value[0],
                 )
                 app.log("Download of new {} tabtoolbar.xml succeeded".format(key))
+                next
             else:
                 return
 
