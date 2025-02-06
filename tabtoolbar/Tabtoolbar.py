@@ -66,11 +66,14 @@ def swapXML(OS):
 
         # Windows
         if platform == "win32":
-            code_path = pathlib.Path(PATHS_DICT.get("appDirectory"))
+            app_path = pathlib.Path(PATHS_DICT.get("appDirectory"))
+            code_path = os.path.join(app_path.parent, "Fusion")
+            meshcode_path = app_path
 
         # Mac OS note that the path is different and requires an additional "Fusion" folder
         elif platform == "darwin":
-            code_path = pathlib.Path(PATHS_DICT.get("appDirectory"))
+            code_path = os.path.join(pathlib.Path(PATHS_DICT.get("appDirectory")), "Fusion", "Fusion")
+            meshcode_path = pathlib.Path(PATHS_DICT.get("appDirectory"))
 
         # Get paths for Design, Mesh, and Flat Pattern tabtoolbar.xml and tabtoolbar.zip
 
@@ -79,8 +82,6 @@ def swapXML(OS):
         # set the path to the Fusion design tabtoolbar.xml on windows
         tb_path = os.path.join(
             code_path,
-            "Fusion",
-            "Fusion",
             "UI",
             "FusionUI",
             "Resources",
@@ -91,8 +92,6 @@ def swapXML(OS):
         # set the path for the Fusion design tabtoolbar.zip archive on windows
         tb_zip = os.path.join(
             code_path,
-            "Fusion",
-            "Fusion",
             "UI",
             "FusionUI",
             "Resources",
@@ -104,7 +103,7 @@ def swapXML(OS):
 
         # set the path to the Fusion mesh tabtoolbar.xml on windows
         pmtb_path = os.path.join(
-            code_path,
+            meshcode_path,
             "ParaMesh",
             "UI",
             "ParaMeshUI",
@@ -115,7 +114,7 @@ def swapXML(OS):
 
         # set the path for the Fusion mesh tabtoolbar.zip archive on windows
         pmtb_zip = os.path.join(
-            code_path,
+            meshcode_path,
             "ParaMesh",
             "UI",
             "ParaMeshUI",
@@ -129,8 +128,6 @@ def swapXML(OS):
         # set the path to the Fusion flatpattern tabtoolbar.xml on windows
         fptb_path = os.path.join(
             code_path,
-            "Fusion",
-            "Fusion",
             "UI",
             "FusionSheetMetalUI",
             "Resources",
@@ -141,8 +138,6 @@ def swapXML(OS):
         # set the path for the Fusion flatpattern tabtoolbar.zip archive on windows
         fptb_zip = os.path.join(
             code_path,
-            "Fusion",
-            "Fusion",
             "UI",
             "FusionSheetMetalUI",
             "Resources",
