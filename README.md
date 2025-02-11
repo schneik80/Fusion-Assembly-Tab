@@ -21,6 +21,7 @@
   - **Automated modeling** now appears in Solid Tab's Create panel menu
 - Insert Panel cleanup
     -remove asssembly related isnert commands from non-assembly insert panel
+- Make the mesh and flatpattern toolbars concistent with general design
 
 ### Screenshot
 
@@ -35,50 +36,3 @@ Launch Fusion and open the **Scripts and Add-ins manager** on the Utilities tab 
 Run the "TabToolbar" script and follow prompts.
 
 
-## Hown to install manualy
-
-**!!! Backup your original TabToolbar.xml before using this new toolbar definition xml !!!**
-
-Download the Tabtoolbar.xml from this repo's code section.
-
-On **Mac OS**, over-write the existing file here:
-
-    /Users/ <Your User Name> /Library/Application Support/Autodesk/webdeploy/production/ <Current deployment GUID> /Autodesk Fusion 360.app/Contents/Libraries/Applications/Fusion/Fusion/UI/FusionUI/Resources/Toolbar/TabToolbars.xml`
-
-On **Windows**, over-write the existing file here:
-
-    \Users\ <Your User Name> \AppData\Local\Autodesk\webdeploy\production\ <Current deployment GUID> \Fusion\UI\FusionUI\Resources\Toolbar\TabToolbars.xml
-
-Relaunch Fusion.
-
-## Uninstall
-
-To uninstall, restore the original file you archived and restart Fusion.
-
-----
-
-## Special instructions for Mesh tab
-
-To remove Assemble tools from Mesh Tab toolbar:
-
-**!!! Backup your original TabToolbar.xml before modifying !!!**
-
-On **Mac OS**, edit the existing file here:
-
-> /Users/ <Your User Name> /Library/Application Support/Autodesk/webdeploy/production/ <Current deployment GUID> /Autodesk Fusion 360.app/Contents/Libraries/Applications/Paramesh//UI/ParaMeshUI/Resources/Toolbar/TabToolbars.xml`
-
-On **Windows**, edit the existing file here:
-
-> \Users\ <Your User Name> \AppData\Local\Autodesk\webdeploy\production\ <Current deployment GUID> \ParaMesh\UI\ParaMeshUI\Resources\Toolbar\TabToolbars.xml
-
-From `Tab Id="ParaMeshOuterTab"`  
-
-Remove `"AssemblePanel;"`  
-
-So the line now reads: `"Panels="ParaMeshCreatePanel;ParaMeshPreparePanel;ParaMeshModifyPanel;ConfigurePanel;ConstructionPanel;InspectPanel;InsertPanel;ParaMeshSelectPanel;ParaMeshExportPanel;SnapshotPanel"`
-
-From `Tab Id="ParaMeshBaseFeatureTab"`  
-
-Remove `"AssemblePanel;"`  
-
-So the line now reads: `Panels="ParaMeshCreateBaseFeature;ParaMeshPreparePanel;ParaMeshModifyPanel;ConstructionPanel;InspectPanel;ParaMeshSelectPanel;ParaMeshExportPanel;ParaMeshBaseFeatureStopPanel"`
