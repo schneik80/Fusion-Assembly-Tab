@@ -9,7 +9,6 @@
   - New **Motion** panel in the Assembly tab
     - Move motion tools to Motion panel
   - Removes **Assemble** panel from other domain specific ( i.e. Sheetmetal, Plastic, others ) Modeling tabs.
-    > NOTE: To remove Assemble from the Mesh tab requires an additional xml document to be modified.
   - Moves **As Built Joint** and **Joint Origin** into an **Advanced** sub menu
   - Removes **Align** from all menus except the Solid tab Modify Panel
   - Joint Origin command is now also in the Construct panel menu across all tabs
